@@ -1,6 +1,6 @@
-- Author: <your name here>
-- Studen ID: <your student ID here>
-- Email:
-- Phone:
-- Skype: <if you own one>
-<and other contacts if you'd like to add>
+﻿- Author: HUỲNH NGỌC THẮNG
+- Studen ID: 13520775
+- Email: ngocthanguit@gmail.com
+- Phone: 0972516794
+- Skype: ngocthanguit@gmail.com
+- Facebook: https://www.facebook.com/ngocthang.huynh.16
