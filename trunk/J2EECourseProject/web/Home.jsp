@@ -27,7 +27,7 @@
             <nav class="navbar-default" style="padding-left: 5%; padding-right: 5%" id="nav_before_login">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a href="ref_main_page" onclick="#"><img src="res/mar/icon.png" class="navbar-brand"/></a>
+                        <a href="ref_main_page" onclick="#"><img src="res/icon.png" class="navbar-brand"/></a>
                     </div>
                     <ul class="nav navbar-right navbar-nav">
                         <li><a href="#" onclick="searchWithKey()">FAQ</a></li>
@@ -49,7 +49,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <img class="logo" src="res/mar/logo.png" style="display: block">
+                            <img class="logo" src="res/logo.png" style="display: block">
                             <input type="text" class="form-control" id="main_search_box_key_word" onkeypress="onSearchBoxKeyPress(event)">
                         </div>
                     </div>
