@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 3, 2017, 11:13:11 AM
+    Author     : tuan.tranminh3
+*/
+
+#player {
+    width: 100%;
+    display: inline-block;
+    background-color: var(--alpha70color10);
+}
+
+#player-wrapper {
+    color: var(--color09);
+    margin: 5px;
+}
+    .player-button i {
+        padding-right: 10px;
+        color: var(--color07);
+        font-size: 20;  /* DESIGN HARD-CODED PARAM */
+    }
+    .player-button i:hover {
+        color: var(--color09);
+        cursor: pointer;
+    }
+    .player-button i:active {
+        color: var(--color07);
+    }
+        #button-play i{
+            float: left;        
+            font-size: 83;  /* DESIGN HARD-CODED PARAM */
+            padding: 0;
+        }
+    #player-layout {
+        width: 100%;
+    }
+        .grow{
+            width: 100%;
+        }
+        
+#song-info {
+    color: var(--color09);
+    padding: 0px 10px;  /* DESIGN HARD-CODED PARAM */
+    overflow: hidden;
+}
+
+#song-name {
+    font-size: 20;  /* DESIGN HARD-CODED PARAM */
+}
+
+#musician-name {
+    font-size: 15;  /* DESIGN HARD-CODED PARAM */
+}
+
+#time-line {
+    width: 100%;
+    display: inline-block;
+}
+    #time-navigate {
+        width: 100%;
+    }
+    
+    #time-navigate {
+        margin: 10px 0px;
+    }
+        #time-navigate-background {
+            height: 100%;
+            width: 100%;
+        }
+
+.navigate_bar_adjustable {
+    height: 5px;  /* DESIGN HARD-CODED PARAM */
+    width: 50px;
+}
+        
+.navigate_bar_adjustable:hover {
+    cursor: pointer;
+}        
+
+.navigate_bar_bottom {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color07);
+    z-index: 3;
+}
+    .navigate_bar_middle {
+        width: 75%;
+        height: 100%;
+        background-color: var(--color09);
+        z-index: 2;
+    }
+        .navigate_bar_top {
+            width: 50%;
+            height: 100%;
+            background-color: var(--color08);
+            z-index: 1;
+        }
+        
+#control-tray {
+    display: inline-block;
+    width: 100%;
+}
+        
+#timer{
+    display: inline-block;
+    font-size: 20px; /* DESIGN HARD-CODED PARAM */
+    float: right;
+}
+
+#control-buttons {
+    position: related;
+    display: inline-block;
+}
+    #button-next {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #button-bookmark {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #volume-control {
+        display: inline-block;
+        vertical-align: middle;
+    }
+        #button-mute {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #sound-navigate {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #volume-control i {
+            padding: 0;
+        }

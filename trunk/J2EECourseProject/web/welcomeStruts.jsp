@@ -20,8 +20,17 @@
             </div>
         </logic:notPresent>
         
-        <h3><bean:message key="welcome.heading"/></h3>
-        <p><bean:message key="welcome.message"/></p>
-        
+        <table>
+            <tr>
+                <td>
+                    <jsp:include page="form/sampleform.jsp"/>
+                </td>
+                <td>
+                    <h3><bean:message key="welcome.heading"/></h3>
+                    <p><bean:message key="welcome.message"/></p>
+                </td>
+            </tr>
+        </table>        
+        <jsp:include page="component/mediaplayer.jsp"/>
     </body>
 </html:html>
