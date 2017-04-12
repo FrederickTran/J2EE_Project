@@ -10,6 +10,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><bean:message key="welcome.title"/></title>
         <html:base/>
+        <%@include file="genericInclude.jsp" %>
     </head>
     <body style="background-color: white">
         
@@ -31,6 +32,6 @@
                 </td>
             </tr>
         </table>        
-        <jsp:include page="component/mediaplayer.jsp"/>
+        <%@include file="component/mediaplayer.jsp" %>
     </body>
 </html:html>

@@ -7,20 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%@ taglib uri="../WEB-INF/struts-bean.tld" prefix="bean" %>
-<%@ taglib uri="../WEB-INF/struts-html.tld" prefix="html" %>
-<%@ taglib uri="../WEB-INF/struts-logic.tld" prefix="logic" %>
-
 <html>
     <head>
-        <!-- CSS -->
-        <link type="text/css" rel="stylesheet" href="css/color_table.css"/>
-        <link type="text/css" rel="stylesheet" href="css/boostrap/css/bootstrap.css"/>
-
-        <link type="text/css" rel="stylesheet" href="css/media_player/media_player.css"/>
-
-        <!-- METADATA -->
-    
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
@@ -30,12 +18,12 @@
         <!-- THIS IS THE CODE -->
         <div id="player">
             <div id="player-wrapper">
-                <audio id="media-controler"></audio>
+                <audio id="media-controler" src="res/demo.mp3" controls></audio>
                 <table id="player-layout">
                     <tr>
                         <td>
                             <div id="button-play" class="player-button">
-                                <a><i class="glyphicon glyphicon-play-circle"></i></a>
+                                <a onclick="buttonAction_Play()"><i class="glyphicon glyphicon-play-circle"></i></a>
                             </div>
                         </td>
                         <td class="grow">
