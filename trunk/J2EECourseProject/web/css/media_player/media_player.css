@@ -73,8 +73,7 @@ and open the template in the editor.
         }
 
 .navigate_bar_adjustable {
-    height: 5px;  /* DESIGN HARD-CODED PARAM */
-    width: 50px;
+    height: 5px;    /* DESIGN HARD-CODED PARAM */
 }
         
 .navigate_bar_adjustable:hover {
@@ -88,13 +87,11 @@ and open the template in the editor.
     z-index: 3;
 }
     .navigate_bar_middle {
-        width: 75%;
         height: 100%;
         background-color: var(--color09);
         z-index: 2;
     }
         .navigate_bar_top {
-            width: 50%;
             height: 100%;
             background-color: var(--color08);
             z-index: 1;
@@ -134,6 +131,7 @@ and open the template in the editor.
         #sound-navigate {
             display: inline-block;
             vertical-align: middle;
+            width: 50px;    /* DESIGN HARD-CODED PARAM */
         }
         #volume-control i {
             padding: 0;
