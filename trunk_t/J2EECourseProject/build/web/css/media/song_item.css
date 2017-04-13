@@ -1,0 +1,108 @@
+.song_item {
+    color: var(--color07);
+    padding: 15px 0px 0px 0px;
+    margin: 0;
+    position: relative;
+    z-index: var(--z_side_bench_content);
+}
+
+.song_item:hover {
+    /*background: var(--color01);*/
+    color: var(--color09);
+    /*cursor: pointer;*/
+}
+
+.song_item:active {
+    background: var(--color07);
+    color: var(--color08);
+}
+
+.song_item p {
+    position: relative;
+    padding: 0;
+    margin: 0px 0px 0px 15px;
+}
+
+.song_item i {
+    alignment: right;
+    padding: 0px;
+    background: transparent;
+}
+
+.song_item hr {
+    margin: 0px 0px 0px 10px;
+}
+
+.song_item[id="playing_song"] hr {
+    margin: 0px 0px 5px 0px;
+}
+
+.song_item .background {
+    opacity: 1;
+    vertical-align: bottom;
+    position: relative;
+    display: table-cell;
+    height: 100%;
+    background-image: var(--bgimage01);
+}
+
+.song_item p.song_name {
+    font-size: large;
+    display: inline-block;
+}
+
+.song_item p.tag {
+    font-size: x-small;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 0px 3px;
+    margin: 0px 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.song_item p.tag.owned {
+    color: var(--color08);
+    background-color: greenyellow;
+}
+
+.song_item p.tag.sale_off {
+    color: var(--color09);
+    background-color: var(--color13);
+}
+
+.song_item p.tag.free {
+    color: var(--color08);
+    background-color: lawngreen;
+}
+
+.song_item p.song_musician {
+    font-size: small;
+}
+
+.song_item .control_item {
+    display: none;
+    alignment: right;
+    right: 5%;
+    position: absolute;
+    z-index: var(--z_side_bench_control);
+}
+
+.song_item:hover .control_item {
+    display: block;
+}
+
+.song_item button {
+    color: var(--color07);
+}
+
+.song_item button:hover {
+    color: var(--color09);
+    cursor: pointer;
+}
+
+.song_item button:active {
+    color: var(--color07);
+    background: transparent;
+    border: transparent;
+}

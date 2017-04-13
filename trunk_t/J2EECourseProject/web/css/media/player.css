@@ -1,0 +1,35 @@
+.media_player {
+    padding: 10px;
+    color: var(--color09);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.media_player div {
+    padding: 0;
+    margin: 0;
+}
+
+.media_player i{
+    font-size: 33pt;
+    color: var(--color09);
+    vertical-align: middle;
+    alignment: center;
+}
+
+.media_player i:hover {
+    color: var(--color07);
+}
+
+.media_player .song_name {
+    font-size: x-large;
+    padding: 0;
+    margin: 0;
+}
+
+.media_player .song_musician {
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}

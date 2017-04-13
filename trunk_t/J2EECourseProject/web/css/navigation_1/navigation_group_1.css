@@ -1,0 +1,42 @@
+/*@import url(navigation_button_1.css);*/
+/*@import url(navigation_1_ani.css);*/
+
+.navigation_group_1{
+    display: inline-block;
+    padding: inherit;
+    margin: inherit;
+    background-color: -webkit-var(--color04);
+    color: -webkit-var(--color06);
+}
+
+.navigation_group_1:hover{
+    background: var(--bgcolor01);
+}
+
+.navigation_group_1.content{
+    position: absolute;
+    display: none;
+    z-index: 1;
+
+    -webkit-transition:navigation_1_appear 10.3s ease;
+    -moz-transition:navigation_1_appear 10.3s ease ;
+    -o-transition:navigation_1_appear 10.3s ease ;
+    transition:navigation_1_appear 10.3s ease ;
+}
+
+.navigation_group_1:hover .navigation_group_1.content {
+    display: block;
+    background-color: var(--color07);
+}
+
+.navigation_group_1 li{
+    list-style-type: none;
+}
+
+.navigation_group_1 li:hover:not(.active) {
+    background: var(--color06);
+}
+
+.navigation_group_1 li:hover(.active) {
+    background: var(--color07);
+}

@@ -1,0 +1,9 @@
+.logobox_1 {
+    alignment: left;
+    padding: 15px;
+    margin: 15px;
+    background: inherit;
+    width: 150px;
+    height: 150px;
+    background-image: var(--logo);
+}

@@ -1,0 +1,67 @@
+.modal-content {
+    border-radius: 0px;
+    background: var(--color09);
+}
+
+.modal-content button:not([class="close"]) {
+    border-radius: 0px;
+    border: 1px solid var(--color07);
+    background: var(--color09);
+}
+
+.modal-content .btn.btn-default {
+    font-weight: 600;
+}
+
+/*.modal-content .form-group label {*/
+    /*display: block;*/
+    /*margin: 10px 0px 0px 0px;*/
+/*}*/
+
+.modal-content .attention_block {
+    background: var(--alpha20color13);
+    padding: 5px 5px 0px 5px;
+}
+
+.shopForm {
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+}
+
+.modal-content .row {
+    margin: 5px 0px 0px 0px;
+    vertical-align: baseline;
+}
+
+.modal-content form {
+    padding: 0px;
+    margin: 0px;
+}
+
+.modal-content .hint {
+    font-size: x-small;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.modal-content .modal-header {
+    padding: 6px;
+}
+
+.modal-content .modal-body {
+    padding-top: 0px;
+}
+
+.modal-content .modal-footer {
+    padding: 7px;
+}
+
+.modal-content .form-group {
+    margin: 0px;
+    padding: 0px;
+}
