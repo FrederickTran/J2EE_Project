@@ -1,0 +1,136 @@
+html, body{
+    height: 100vh;
+}
+
+.full_expand{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.align_center{
+    text-align: center;
+}
+
+.root {
+    --logo: url(../res/mar/logo.png);
+    --icon: url(../res/mar/icon.png);
+}
+
+/*Z order*/
+.root {
+    --z_background_theme_color: 1;
+    --z_background: 2;
+    --z_side_bench: 3;
+    --z_side_bench_content: 4;
+    --z_side_bench_control: 5;
+    --z_navigation_bar: 6;
+    --z_navigation_control: 7;
+    --z_dialog_sign_in: 8;
+    --z_dialog_sign_up: 9;
+}
+
+.backgroundLayer {
+    position: absolute;
+    background: radial-gradient(at top left, #F7E9AB, #221526);
+    z-index: var(--z_background_theme_color);
+    width: 100%;
+    height: 100%;
+}
+
+.background01{
+    position: absolute;
+    background-image: url(../res/mar/bg01.jpg);
+    opacity: 0.1;
+    z-index: var(--z_background);
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+}
+
+.container.full {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container.full .row {
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid.full .row.main {
+    height: 92vh;
+    padding: 0;
+    margin: 0;
+}
+
+.main_content_table {
+    position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main_content_table_cell {
+    display: table-cell;
+    border-collapse: separate;
+    float: right;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main_content_table_row {
+    display: table-row;
+    border-collapse: separate;
+    padding: 0px;
+    margin: 0;
+}
+
+.row.no_gutter {
+    margin-left: 0 !important;
+    margin-right: 0 !important;;
+}
+
+.row[class*='col-'] {
+    margin-left: 0 !important;;
+    margin-right: 0 !important;;
+    padding-left: 0 !important;;
+    padding-right: 0 !important;;
+}
+
+.no_gutter > [class*='col-'] {
+    padding-left: 0 !important;;
+    padding-right: 0 !important;;
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+script {
+    padding: inherit;
+    margin-right: inherit;
+    width: inherit;
+    height: inherit;
+    position: inherit;
+    display: inherit;
+}
+
+.hidden {
+    display: block;
+}
+
+.smooth_transform {
+    transition: all 0.4s cubic-bezier(0.02, 0.1, 0.47, 1);
+}

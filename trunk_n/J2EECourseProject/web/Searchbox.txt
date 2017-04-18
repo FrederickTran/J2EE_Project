@@ -1,0 +1,33 @@
+<%-- 
+    Document   : searchbox
+    Created on : Apr 12, 2017, 8:43:26 PM
+    Author     : NguyenPC
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <div id="search-box">
+            <div id="search-box-wrapper">
+                <div id="row">
+                    <div id="search-logo" class="col-md-12">
+                        <a><img src="../res/logo.png" /></a>
+                    </div>
+                    <div id="control-buttons" class="col-md-12">
+                        <div id="button-search-list" class="search-button">
+                            <button class="btn btn-default">Search for song</button>
+                        </div>
+                        <div id="button-term-of-service" class="search-button">
+                            <button class="btn btn-default">Term of service</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

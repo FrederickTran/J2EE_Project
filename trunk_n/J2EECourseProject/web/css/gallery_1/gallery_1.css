@@ -1,0 +1,19 @@
+.img-thumbnails .img-thumbnail {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 80px;
+    width: 100%;
+}
+
+.img-thumbnails .col-md-2 {
+    padding: 0;
+    margin: 0;
+}
+
+.img-thumbnails.div .thumbnailHolder {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    overflow: hidden;
+}

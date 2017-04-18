@@ -1,0 +1,47 @@
+/*@import url(../color_table.css);*/
+
+.navigation_button_1{
+    alignment: left;
+    padding: 10px 5px;
+    color: -webkit-var(--color02);
+    background-color: -webkit-var(--color06);
+
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.navigation_button_1.head{
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    background-color: inherit;
+}
+
+.navigation_button_1.head:hover{
+    background-color: inherit;
+}
+
+.navigation_button_1:hover{
+    background-color: inherit;
+    /*color: -webkit-var(--color06);*/
+    -webkit-animation: appear;
+    -o-animation: appear;
+    animation: appear;
+}
+
+.navigation_button_1 a {
+    text-decoration: inherit;
+    color: inherit;
+    background-color: inherit;
+    padding: inherit;
+    margin: inherit;
+}
+
+.navigation_button_1.head.home{
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+}
