@@ -18,23 +18,23 @@
         <!-- THIS IS THE CODE -->
         <div id="player">
             <div id="player-wrapper">
-                <audio id="media-controler" src="res/demo.mp3" controls></audio>
+                <audio id="media-controler"></audio>
                 <table id="player-layout">
                     <tr>
                         <td>
                             <div id="button-play" class="player-button">
-                                <a onclick="buttonAction_Play()"><i class="glyphicon glyphicon-play-circle"></i></a>
+                                <a onclick="action_Play()"><i class="glyphicon glyphicon-play-circle" id="button-play-icon"></i></a>
                             </div>
                         </td>
-                        <td class="grow">
+                        <td class="grow" id="song-info-cell">
                             <div id="song-info">
                                 <div id="song-name">
-                                    Virus
+                                    Небеса Европы
                                 </div>
                                 <div id="musician-name">
-                                    L.V. Beethoven
+                                    Александр Рыбак
                                 </div>
-                                <div id="time-navigate" class="navigate_bar_adjustable">
+                                <div id="time-navigate" class="navigate_bar_adjustable" onclick="action_Skip(event)">
                                     <div id="time-navigate-bar">
                                         <div id="time-navigate-background" class="navigate_bar_bottom">
                                             <div id="time-navigate-downloaded" class="navigate_bar_middle">
@@ -54,11 +54,11 @@
                                             <a><i class="glyphicon glyphicon-heart-empty"></i></a>
                                         </div>
                                         <div id="volume-control">
-                                            <div id="button-mute" class="player-button">
-                                                <a><i class="glyphicon glyphicon-volume-up"></i></a>
+                                            <div id="button-mute" class="player-button" onclick="action_Mute()">
+                                                <a><i class="glyphicon glyphicon-volume-up" id="button-mute-icon"></i></a>
                                             </div>
                                             <div id="sound-navigate">
-                                                <div id="sound-navigate-bar" class="navigate_bar_adjustable">
+                                                <div id="sound-navigate-bar" class="navigate_bar_adjustable" onclick="action_AdjustVolume(event)">
                                                     <div id="sound-navigate-background" class="navigate_bar_bottom">
                                                         <div id="sound-navigate-current" class="navigate_bar_top">
 
