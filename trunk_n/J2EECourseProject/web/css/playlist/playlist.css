@@ -1,0 +1,229 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 16, 2017, 10:16:02 AM
+    Author     : NguyenPC
+*/
+
+.song_item {
+    color: var(--color07);
+    padding: 15px 0px 0px 0px;
+    margin: 0;
+    position: relative;
+    z-index: var(--z_side_bench_content);
+}
+
+.song_item:hover {
+    /*background: var(--color01);*/
+    color: var(--color09);
+    /*cursor: pointer;*/
+}
+
+.song_item:active {
+    background: var(--color07);
+    color: var(--color10);
+}
+
+.song_item p {
+    position: relative;
+    padding: 0;
+    margin: 0px 0px 0px 15px;
+}
+
+.song_item i {
+    alignment: right;
+    padding: 0px;
+    background: transparent;
+}
+
+.song_item hr {
+    margin: 0px 0px 0px 10px;
+}
+
+.song_item[id="playing_song"] hr {
+    margin: 0px 0px 5px 0px;
+}
+
+.song_item .background {
+    opacity: 1;
+    vertical-align: bottom;
+    position: relative;
+    display: table-cell;
+    height: 100%;
+    background-image: url('../res/disk_mp3.png');
+}
+
+.song_item p.song_name {
+    font-size: large;
+    display: inline-block;
+}
+
+.song_item p.tag {
+    font-size: x-small;
+    font-weight: 700;
+    border-radius: 3px;
+    padding: 0px 3px;
+    margin: 0px 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.song_item p.tag.owned {
+    color: var(--color10);
+    background-color: greenyellow;
+}
+
+.song_item p.tag.sale_off {
+    color: var(--color09);
+    background-color: var(--color13);
+}
+
+.song_item p.tag.free {
+    color: var(--color10);
+    background-color: lawngreen;
+}
+
+.song_item p.song_musician {
+    font-size: small;
+}
+
+.song_item .control_item {
+    display: none;
+    alignment: right;
+    right: 5%;
+    position: absolute;
+    z-index: var(--z_side_bench_control);
+}
+
+.song_item:hover .control_item {
+    display: block;
+}
+
+
+.song_list {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0px;
+}
+
+.song_list hr {
+    padding: 0;
+    margin: 0px 15px 0px 0px;
+}
+
+
+
+.song_list.no_padding {
+    padding: 0;
+}
+
+.control-song-item {
+    color: var(--color07);
+    display: inline-block;
+    border: 1px solid #a1a1a1;
+    border-radius: 5px;
+}
+
+.control-song-item:hover {
+    color: var(--color09);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.control-song-item:active {
+    color: var(--color07);
+    background: transparent;
+    border: transparent;
+    display: inline-block;
+}
+
+.media_player {
+    padding: 10px;
+    color: var(--color09);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.media_player div {
+    padding: 0;
+    margin: 0;
+}
+
+.media_player i{
+    font-size: 33pt;
+    color: var(--color09);
+    vertical-align: middle;
+    alignment: center;
+}
+
+.media_player i:hover {
+    color: var(--color07);
+}
+
+.media_player .song_name {
+    font-size: x-large;
+    padding: 0;
+    margin: 0;
+}
+
+.media_player .song_musician {
+    font-size: small;
+    padding: 0;
+    margin: 0;
+}
+
+.side_bench {
+    padding: 0;
+    margin: 5px;
+    position: relative;
+    color: var(--color07);
+    z-index: var(--z_side_bench);
+}
+
+.side_bench_background {
+    position: relative;
+    background: var(--color10);
+    z-index: var(--z_side_bench);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /*border-radius: 5px;*/
+    opacity: 0.8;
+}
+
+.side_bench_background hr {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-color: var(--color07);
+}
+
+.side_bench .search_box {
+    border-radius: 50px;
+    background: transparent;
+    z-index: var(--z_side_bench_content);
+}
+
+.side_bench .form-group {
+    display: inline;
+    position: relative;
+    padding: 0;
+    margin: 0
+}
+
+
+#song_list_search{
+    background-color: #4F4F4F;
+}
+
+.row no_gutter{
+    background-color: #4F4F4F;
+}
+
+#song_list_player{
+    background-color: #4F4F4F;
+}
