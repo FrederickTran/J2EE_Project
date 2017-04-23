@@ -20,7 +20,7 @@
             <div id="song_list_search" class="song_list" style="padding: 0;">
                 <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -39,7 +39,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="2" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="3" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -96,7 +96,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -115,7 +115,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="2" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -153,7 +153,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="3" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -172,7 +172,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -191,7 +191,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -210,7 +210,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="2" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -229,7 +229,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="3" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -248,7 +248,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -267,7 +267,7 @@
                 </div>
                 <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
                         <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">

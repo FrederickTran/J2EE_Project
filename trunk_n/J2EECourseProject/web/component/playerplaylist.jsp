@@ -31,7 +31,7 @@
                 <div id="song_list_player" class="song_list has_scrollbar" style="padding: 0; margin: 10px 0px 0px 0px; position: relative; bottom: 0;">
                     <div class="song_item unselectable_obj" style="animation: slidein 0.4s;">
                         <div class="control_item unselectable_obj" id="control_panel">
-                            <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                            <div id="button-minus" class="control-song-item" style="margin: 0px; padding: 5px;">
                                 <i class="glyphicon glyphicon-minus"></i>
                             </div>
                             <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -49,7 +49,7 @@
                     </div>
                     <div class="song_item unselectable_obj" style="animation: slidein 0.4s;">
                         <div class="control_item unselectable_obj" id="control_panel">
-                            <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                            <div id="button-minus" class="control-song-item" style="margin: 0px; padding: 5px;">
                                 <i class="glyphicon glyphicon-minus"></i>
                             </div>
                             <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="song_item unselectable_obj" style="animation: slidein 0.4s;">
                         <div class="control_item unselectable_obj" id="control_panel">
-                            <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                            <div id="button-minus" class="control-song-item" style="margin: 0px; padding: 5px;">
                                 <i class="glyphicon glyphicon-minus"></i>
                             </div>
                             <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -85,7 +85,7 @@
                     </div>
                     <div class="song_item unselectable_obj" style="animation: slidein 0.4s;">
                         <div class="control_item unselectable_obj" id="control_panel">
-                            <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                            <div id="button-minus" class="control-song-item" style="margin: 0px; padding: 5px;">
                                 <i class="glyphicon glyphicon-minus"></i>
                             </div>
                             <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="song_item unselectable_obj" style="animation: slidein 0.4s;">
                         <div class="control_item unselectable_obj" id="control_panel">
-                            <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                            <div id="button-minus" class="control-song-item" style="margin: 0px; padding: 5px;">
                                 <i class="glyphicon glyphicon-minus"></i>
                             </div>
                             <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
@@ -121,7 +121,7 @@
                     </div>
                     <div class="song_item unselectable_obj" style="animation: slidein 0.4s;">
                         <div class="control_item unselectable_obj" id="control_panel">
-                            <div id="button-play" class="control-song-item" style="margin: 0px; padding: 5px;">
+                            <div id="button-minus" class="control-song-item" style="margin: 0px; padding: 5px;">
                                 <i class="glyphicon glyphicon-minus"></i>
                             </div>
                             <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
