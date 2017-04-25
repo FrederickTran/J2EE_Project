@@ -17,13 +17,21 @@
         <title>JSP Page</title>
         
         <!-- CSS -->
+        
         <link type="text/css" rel="stylesheet" href="css/color_table.css"/>
         <link type="text/css" rel="stylesheet" href="css/boostrap/css/bootstrap.css"/>
+        <link type="text/css" rel="stylesheet" href="css/layout.css"/>
+        <link href="css/boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         
         <!-- COMPONENT SPEC -->
         <!-- Media Player -->
         <link type="text/css" rel="stylesheet" href="css/media_player/media_player.css"/>
         <script src="js/mediaplayer.js"></script>
         
+         <!-- Search Box -->
+        <link href="css/search_box_1/search_box_1.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Play list, Player Playlist -->
+        <link href="css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
     </head>
 </html>

@@ -21,17 +21,8 @@
             </div>
         </logic:notPresent>
         
-        <table>
-            <tr>
-                <td>
-                    <jsp:include page="form/sampleform.jsp"/>
-                </td>
-                <td>
-                    <h3><bean:message key="welcome.heading"/></h3>
-                    <p><bean:message key="welcome.message"/></p>
-                </td>
-            </tr>
-        </table>        
-        <%@include file="component/mediaplayer.jsp" %>
+        <%@include file="component/searchbox.jsp" %>
+        <%@include file="component/playlist.jsp" %>
+        <%@include file="component/playerplaylist.jsp" %>
     </body>
 </html:html>
