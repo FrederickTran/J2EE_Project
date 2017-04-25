@@ -208,6 +208,17 @@ and open the template in the editor.
     z-index: var(--z_side_bench_content);
 }
 
+#side_bench_search_list {
+    background:var(--alpha40color10);
+    height:100%;
+}
+
+#side_bench_media_player {
+    background: var(--alpha70color10);
+    padding: 0;
+    height: 100%;
+}
+
 .side_bench .form-group {
     display: inline;
     position: relative;

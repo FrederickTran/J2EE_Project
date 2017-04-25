@@ -9,14 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../css/color_table.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/boostrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
         <title>Play list</title>
     </head>
     <body>
-        <div class="main_content_table_cell has_scrollbar smooth_transform" id="side_bench_search_list" style="width: 33%; height: 100%; background:var(--alpha40color10);">
+        <div class="main_content_table_cell has_scrollbar smooth_transform" id="side_bench_search_list">
             <div id="song_list_search" class="song_list" style="padding: 0;">
                 <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
                     <div class="control_item unselectable_obj" id="control_panel">

@@ -21,8 +21,24 @@
             </div>
         </logic:notPresent>
         
-        <%@include file="component/searchbox.jsp" %>
-        <%@include file="component/playlist.jsp" %>
-        <%@include file="component/playerplaylist.jsp" %>
+        <div class = "backgroundLayer"></div>
+        <div class="background01"></div>
+            <div class="container-fluid full" style="height: 100%; padding: 0; margin: 0;">
+                <div class="row no_gutter">
+                    <div class="row main no_gutter main_content_table">
+                        <div class="col-md-5">
+                            <div id="main_search_box" class="main_content_table_cell full_expand smooth_transform" align="center" >
+                                <%@include file="component/searchbox.jsp" %>
+                            </div>
+                        </div>    
+                        <div class="col-md-4">
+                            <%@include file="component/playlist.jsp" %>
+                        </div>
+                        <div class="col-md-3">
+                            <%@include file="component/playerplaylist.jsp" %>
+                        </div>
+                    </div>
+                </div> <!--row-->
+            </div> <!-- container -->
     </body>
 </html:html>

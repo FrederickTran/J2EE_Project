@@ -9,14 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../css/color_table.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/boostrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="../css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="container-fluid main_content_table_cell full_expand smooth_transform" id="side_bench_media_player" style="padding: 0px; width: 25%; height: 100%; background: var(--alpha70color10);">
+        <div class="container-fluid main_content_table_cell full_expand smooth_transform" id="side_bench_media_player">
             <div class="row no_gutter" style="height: 10dvh; position: relative;">
                 <%@include file="mediaplayer.jsp" %>
                 <p style="font-size: x-small; display: none; padding: 5px; background: #FF3B30;
