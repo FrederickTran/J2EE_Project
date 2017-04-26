@@ -16,13 +16,13 @@
         <div class="form-group search_box_1">
             <div class="container-fluid">
                 <div id="logo-search-box" class="row">
-                    <div id="logo-search" class="col-md-12">
+                    <div id="logo-search">
                         <img class="logo" src="res/logo.png" style="display: block">
                         <input type="text" id="main_search_box_key_word" name="search-input" class="form-control" >
                     </div>
                 </div>
                 <div id="button-search-tray" class="row">
-                    <div id="button-search-control" >                
+                    <div id="button-search-control">                
                         <input id="button-search-for-song" type="submit" name="text-search-for-song" value="Search For Song"/>
                         <input id="button-term-of-service" type="submit" name="text-term-of-Service" value="Term Of Service"/>       
                     </div>

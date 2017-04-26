@@ -6,15 +6,13 @@
     alignment: center;
     z-index: var(--z_background);
     width: 100%;
-    /*bottom: 40%;*/
-    /*left: 0;*/
     vertical-align: middle;
     margin:0;
     padding: 0;
     display: block;
 }
 
-.search_box_1 input {
+.search_box_1 input[type="submit"]{
     font-weight: 600;
     cursor: default;
     display: inline-block;
@@ -23,15 +21,14 @@
     padding: 10px;
     margin: 10px;
     border-radius: 0;
-    color: #a1a1a1;
+    color: var(--color12);
 }
 
-.search_box_1 input:hover {
+.search_box_1 input[type="submit"]:hover {
     color: var(--color08);
-    border: 1px
-    border-color: var(--color12);
+    border: solid 1px var(--color06);
     border-radius: 3px;
-    background: var(--color09);
+    background: var(--bgcolor02);
 }
 
 .search_box_1 input[type="text"] {

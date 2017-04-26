@@ -8,12 +8,13 @@ and open the template in the editor.
     Author     : NguyenPC
 */
 
-.song_item {
+.song_item{
     color: var(--color07);
     padding: 15px 0px 0px 0px;
     margin: 0;
     position: relative;
     z-index: var(--z_side_bench_content);
+    animation: fadein 0.4s;
 }
 
 .song_item:hover {
@@ -21,6 +22,7 @@ and open the template in the editor.
     color: var(--color09);
     /*cursor: pointer;*/
 }
+
 
 .song_item:active {
     background: var(--color07);
@@ -106,7 +108,7 @@ and open the template in the editor.
 .song_list {
     width: 100%;
     height: 100%;
-    padding: 20px 0px;
+    padding: 0px 0px;
 }
 
 .song_list hr {
@@ -123,8 +125,8 @@ and open the template in the editor.
 .control-song-item {
     color: var(--color07);
     display: inline-block;
-    border: 1px solid #a1a1a1;
-    border-radius: 5px;
+    margin: 0px; 
+    padding: 5px;
 }
 
 .control-song-item:hover {
@@ -134,7 +136,7 @@ and open the template in the editor.
 }
 
 .control-song-item:active {
-    color: var(--color07);
+    color: var(--color08);
     background: transparent;
     border: transparent;
     display: inline-block;
@@ -226,15 +228,15 @@ and open the template in the editor.
     margin: 0
 }
 
-
-#song_list_search{
-    background-color: #4F4F4F;
-}
-
 .row no_gutter{
-    background-color: #4F4F4F;
+    height: 81vh; 
+    position: relative;
 }
 
 #song_list_player{
-    background-color: #4F4F4F;
+    padding: 0; 
+    margin: 10px 0px 0px 0px; 
+    position: relative; 
+    bottom: 0;
 }
+

@@ -13,16 +13,16 @@
     </head>
     <body>
         <div class="main_content_table_cell has_scrollbar smooth_transform" id="side_bench_search_list">
-            <div id="song_list_search" class="song_list" style="padding: 0;">
-                <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
+            <div id="song_list_search" class="song_list">
+                <div class="song_item unselectable_obj" id="0">
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item">
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item">
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item">
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -33,15 +33,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="1" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -52,15 +52,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="2" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="2" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -71,15 +71,15 @@
                     <p class="song_musician unselectable_obj">J.S Bach</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="3" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="3" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -90,15 +90,15 @@
                     <p class="song_musician unselectable_obj">J. Pachelbel</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="0" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -109,15 +109,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="1" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -128,15 +128,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="2" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="2" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -147,15 +147,15 @@
                     <p class="song_musician unselectable_obj">J.S Bach</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="3" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="3" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -166,15 +166,15 @@
                     <p class="song_musician unselectable_obj">J. Pachelbel</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="0" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -185,15 +185,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="1" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -204,15 +204,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="2" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="2" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -223,15 +223,15 @@
                     <p class="song_musician unselectable_obj">J.S Bach</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="3" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="3" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -242,15 +242,15 @@
                     <p class="song_musician unselectable_obj">J. Pachelbel</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="0" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="0" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
@@ -261,15 +261,15 @@
                     <p class="song_musician unselectable_obj">L.v Beethoven</p>
                     <hr class="unselectable_obj">
                 </div>
-                <div class="song_item unselectable_obj" id="1" style="animation: fadein 0.4s;">
+                <div class="song_item unselectable_obj" id="1" >
                     <div class="control_item unselectable_obj" id="control_panel">
-                        <div id="button-player" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-player" class="control-song-item"  >
                             <i class="glyphicon glyphicon-play"></i>
                         </div>
-                        <div id="button-share" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-share" class="control-song-item"  >
                             <i class="glyphicon glyphicon-share"></i>
                         </div>
-                        <div id="button-heart" class="control-song-item" style="margin: 0px; padding: 5px;">
+                        <div id="button-heart" class="control-song-item"  >
                             <i class="glyphicon glyphicon-heart"></i>
                         </div>
                     </div>
