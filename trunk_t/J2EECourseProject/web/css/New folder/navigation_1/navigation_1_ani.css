@@ -1,9 +1,0 @@
-@keyframes navigation_1_appear {
-    0%      {opacity: 0; margin-left: 15px;}
-    100%    {opacity: 1; margin-left: inherit;}
-}
-
-@-webkit-keyframes navigation_1_appear {
-    0%      {opacity: 0; margin-left: 15px;}
-    100%    {opacity: 1; margin-left: inherit;}
-}
