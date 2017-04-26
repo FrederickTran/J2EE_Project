@@ -21,6 +21,7 @@
 
     <action-mappings>
         <action input="/res" name="sampleActionform" path="/login" scope="request" type="com.j2ee.BeanAction.sampleBeanAction" validate="false"/>
+        <action name="SongActionForm" path="/search" scope="request" type="com.j2ee.BeanAction.SongAction" validate="false"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     

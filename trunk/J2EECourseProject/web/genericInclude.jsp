@@ -30,7 +30,13 @@
         
          <!-- Search Box -->
         <link href="css/search_box_1/search_box_1.css" rel="stylesheet" type="text/css"/>
-        
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/generic_values.js"></script>
+        <script src="js/generic_function.js"></script>
+        <script src="js/link_table.js"></script>
+        <script src="js/generator.js"></script>
+        <script src="js/index_action.js"></script>
         <!-- Play list, Player Playlist -->
         <link href="css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
     </head>

@@ -31,10 +31,10 @@
                                 <%@include file="component/searchbox.jsp" %>
                             </div>
                         </div>    
-                        <div class="col-md-4">
+                        <div class="col-md-4" id="play-list">
                             <%@include file="component/playlist.jsp" %>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-3" id="player-playlist">
                             <%@include file="component/playerplaylist.jsp" %>
                         </div>
                     </div>
