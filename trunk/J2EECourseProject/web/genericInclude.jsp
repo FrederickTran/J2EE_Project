@@ -17,11 +17,17 @@
         <title>JSP Page</title>
         
         <!-- CSS -->
-        
+        <link href="css/boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link type="text/css" rel="stylesheet" href="css/color_table.css"/>
         <link type="text/css" rel="stylesheet" href="css/boostrap/css/bootstrap.css"/>
         <link type="text/css" rel="stylesheet" href="css/layout.css"/>
-        <link href="css/boostrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- JS -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/generic_values.js"></script>
+        <script src="js/generic_function.js"></script>
+        <script src="js/link_table.js"></script>
         
         <!-- COMPONENT SPEC -->
         <!-- Media Player -->
@@ -30,13 +36,9 @@
         
          <!-- Search Box -->
         <link href="css/search_box_1/search_box_1.css" rel="stylesheet" type="text/css"/>
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/generic_values.js"></script>
-        <script src="js/generic_function.js"></script>
-        <script src="js/link_table.js"></script>
         <script src="js/generator.js"></script>
         <script src="js/index_action.js"></script>
+        
         <!-- Play list, Player Playlist -->
         <link href="css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
     </head>
