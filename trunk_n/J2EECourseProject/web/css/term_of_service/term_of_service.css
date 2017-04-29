@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 28, 2017, 9:48:58 PM
+    Author     : NguyenPC
+*/
+.modal-body has_scrollbar p{
+    height: 75vh;
+    margin: 0;
+    font-size: large; 
+    font-weight: 600; 
+    padding-bottom: 0px; 
+    padding-top: 20px;
+}

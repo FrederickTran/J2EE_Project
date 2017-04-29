@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 27, 2017, 10:43:12 PM
+    Author     : NguyenPC
+*/
+.navbar-brand {
+    position: relative;
+    z-index: var(--z_navigation_control);
+}
+
+.navbar-nav.navbar-right .btn {
+    position: relative;
+    z-index: var(--z_navigation_control);
+    padding: 4px 20px;  /*DESIGN HARDCODE*/
+    margin: 10px auto;  /*DESIGN HARDCODE*/
+    transition: transform 0.3s;
+}
+
+.navbar-default {
+    position: relative;
+    background: var(--color09);
+    padding-left: 5%;   /*DESIGN HARDCODE*/
+    padding-right: 5%;  /*DESIGN HARDCODE*/
+}
+
+#nav_after_login{
+    display: none;
+}
