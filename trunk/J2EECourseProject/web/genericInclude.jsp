@@ -21,6 +21,7 @@
         <link type="text/css" rel="stylesheet" href="css/color_table.css"/>
         <link type="text/css" rel="stylesheet" href="css/boostrap/css/bootstrap.css"/>
         <link type="text/css" rel="stylesheet" href="css/layout.css"/>
+        <link href="css/random_style.css" rel="stylesheet" type="text/css"/>
         
         <!-- JS -->
         <script src="js/jquery-3.1.1.min.js"></script>
@@ -41,5 +42,11 @@
         
         <!-- Play list, Player Playlist -->
         <link href="css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Navigation -->
+        <link href="css/navigation/navigation.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Sign In Sign Up -->
+        <link href="css/signin_signup/signin_signup.css" rel="stylesheet" type="text/css"/>
     </head>
 </html>

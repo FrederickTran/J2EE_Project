@@ -23,6 +23,7 @@
         
         <div class = "backgroundLayer"></div>
         <div class="background01"></div>
+        <%@include file="component/navigation.jsp" %>
             <div class="container-fluid full" style="height: 100%; padding: 0; margin: 0;">
                 <div class="row no_gutter">
                     <div class="row main no_gutter main_content_table">
