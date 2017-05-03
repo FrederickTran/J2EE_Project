@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import com.j2ee.BeanForm.sampleActionform;
+import java.sql.Date;
+
 
 
 /**
@@ -128,7 +130,7 @@ public class ConnectDB {
         return songList;
     }
     
-    public static boolean validate(String accountId, String password) throws Exception{
+    public static boolean checkLogin(String accountId, String password) throws Exception{
         ArrayList<SongActionForm> songList = new ArrayList();
         Connection cn = ConnectDB.getConnect();
         try {
@@ -149,14 +151,26 @@ public class ConnectDB {
         return false;
     }
     
-    public static boolean signUp(String accountId, String password, String accountName) throws Exception{
+    public static boolean signUp(String accountId, String password, String accountName, String name, String addressLine1, String addressLine2, String addressZip, String addressCountry, String cardNumber, String cvvCode, String expiration) throws Exception{
         ArrayList<SongActionForm> songList = new ArrayList();
+        String d[] = expiration.split("-");
+        int year = Integer.parseInt("1"+d[0]);
+        int month = Integer.parseInt(d[1]);
+        Date date = new Date(year, month - 1, 1);
         Connection cn = ConnectDB.getConnect();
         try {
-            CallableStatement cs = cn.prepareCall("{ call SP_USER_INSERT(?, ?, ?) }");
+            CallableStatement cs = cn.prepareCall("{ call SP_USER_INSERT(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }");
             cs.setString("AccountId", accountId);
             cs.setString("Password", password);
             cs.setString("AccountName", accountName);
+            cs.setString("Name", name);
+            cs.setString("AddressLine1", addressLine1);
+            cs.setString("AddressLine2", addressLine2);
+            cs.setString("AddressZip", addressZip);
+            cs.setString("AddressCountry", addressCountry);
+            cs.setString("CardNumber", cardNumber);
+            cs.setString("CvvCode", cvvCode);
+            cs.setDate("Expiration", date);
             int rs = cs.executeUpdate();
             if(rs == 1){
                 return true;

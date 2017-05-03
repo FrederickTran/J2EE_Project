@@ -12,8 +12,10 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.j2ee.BeanForm.sampleActionform;
+import com.j2ee.DataTableBridge.ConnectDB;
 import org.jboss.weld.event.Status;
 import com.j2ee.DataTableBridge.TABLE_DEMO_Bridge;
+import java.io.PrintWriter;
 
 /**
  *
@@ -39,14 +41,22 @@ public class sampleBeanAction extends org.apache.struts.action.Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        sampleActionform beanForm = (sampleActionform)form;
-        String accountID = beanForm.getAccountID();
-        String password = beanForm.getPassword();
-        
-        if (TABLE_DEMO_Bridge.checkLogin(accountID, password))
+        // Login with ajax
+        String accountId=(String)request.getParameter("accountId");
+        String password=(String)request.getParameter("password");
+        String result = "";
+        if (ConnectDB.checkLogin(accountId, password))
         {
-            return mapping.findForward(SUCCESS);
+            result = SUCCESS;
         }
-        return mapping.findForward(FAILURE);
+        else{
+            result = FAILURE;
+        }
+        response.setContentType("text/text;charset=utf-8");
+        response.setHeader("cache-control", "no-cache");
+        PrintWriter out = response.getWriter();
+        out.write(result);
+        out.flush();
+        return mapping.findForward(SUCCESS);
     }
 }

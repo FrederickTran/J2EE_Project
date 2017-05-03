@@ -25,7 +25,7 @@
                 <div id="button-search-tray" class="row">
                     <div id="button-search-control">                
                         <input id="button-search-for-song" type="submit" name="text-search-for-song" value="Search For Song"/>
-                        <input id="button-term-of-service" type="submit" name="text-term-of-Service" value="Term Of Service"/>       
+                        <input id="button-term-of-service" type="button" name="text-term-of-Service" value="Term Of Service" data-toggle="modal" data-target="#modal_term_of_service"/>       
                         </div>
                     </div>
                 </form>

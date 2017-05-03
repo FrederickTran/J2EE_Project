@@ -1,8 +1,6 @@
 const ref_main_page="index_demo2.html";
 const ref_e404_page="e404.html";
 
-const src_random_musician="mar/icon.png";
-
 function getLinkFromHref(href) {
     switch (href){
         case "ref_main_page": return ref_main_page;

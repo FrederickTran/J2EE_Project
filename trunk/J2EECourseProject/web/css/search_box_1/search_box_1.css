@@ -23,8 +23,25 @@
     border-radius: 0;
     color: var(--color12);
 }
+.search_box_1 input[type="button"]{
+    font-weight: 600;
+    cursor: default;
+    display: inline-block;
+    position: relative;
+    alignment: left;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0;
+    color: var(--color12);
+}
 
 .search_box_1 input[type="submit"]:hover {
+    color: var(--color08);
+    border: solid 1px var(--color06);
+    border-radius: 3px;
+    background: var(--bgcolor02);
+}
+.search_box_1 input[type="button"]:hover {
     color: var(--color08);
     border: solid 1px var(--color06);
     border-radius: 3px;

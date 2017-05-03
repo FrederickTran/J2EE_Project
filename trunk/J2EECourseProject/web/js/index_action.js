@@ -9,6 +9,14 @@ function onLoad(){
         searchWithKey();
         return false;
     });
+    $('#login-form').submit(function () {
+        loginFormLogin();
+        return false;
+    });
+    $('#signup-form').submit(function () {
+        signUp();
+        return false;
+    });
 }
 
 function onSearchBoxKeyPress(keyPress)
@@ -85,7 +93,7 @@ function renewSeachListByKey()
             for (var i = 0; i < obj.length; i++) {
                 var songList = generateSearchSongItem(obj[i].songName, obj[i].musician, false, (obj[i].price == 0), i);
                 document.getElementById("side_bench_search_list").appendChild(songList);
-                songList.style.animation = "fadein 0.4s";
+                songList.style.animation = "EFFECT_FADEIN";
             }
         }
       };
@@ -112,7 +120,7 @@ function randomPlaylist()
                         else {
                             var songList = addSongToPlayList(DemoSongList[i], DemoMusicianList[i], DemoBoughtList[i], DemoFreeList[i], i);
                             document.getElementById("side_bench_search_list").appendChild(songList);
-                            songList.style.animation = "fadein 0.4s";
+                            songList.style.animation = "EFFECT_FADEIN";
                         }
                     }
                 }
@@ -127,7 +135,7 @@ function randomPlaylist()
         var mediaElement = document.getElementById("media_player_UI");
         setTimeout(function () {
             mediaElement.style.display = "block";
-            mediaElement.style.animation = "fadein 0.4s";
+            mediaElement.style.animation = "EFFECT_FADEIN";
         }, 400);
 
         setTimeout(function () {
@@ -179,7 +187,7 @@ function playSong(songName, musician, isBought, isFree)
         var mediaElement = document.getElementById("media_player_UI");
         setTimeout(function () {
             mediaElement.style.display = "block";
-            mediaElement.style.animation = "fadein 0.4s";
+            mediaElement.style.animation = "EFFECT_FADEIN";
         }, 400);
 
         setTimeout(function () {
@@ -231,6 +239,18 @@ function signUp() {
     var accountId = document.getElementById("user_input_user_loginid").value;
     var password = document.getElementById("user_input_user_password").value;
     var rePassword = document.getElementById("user_input_user_confirm_password").value;
+    
+    var name = document.getElementById("payment-form-name").value;
+    var addressLine1 = document.getElementById("payment-form-address-1").value;
+    var addressLine2 = document.getElementById("payment-form-address-2").value;
+    var addressZip = document.getElementById("payment-form-address-zip").value;
+    
+    var selectAddress = document.getElementById("payment-form-address-country");
+    var addressCountry = selectAddress.options[selectAddress.selectedIndex].text;
+    var cardNumber = document.getElementById("payment-form-card-number").value;
+    var cvvCode = document.getElementById("payment-form-cvv-code").value;
+    var expirationMonth = document.getElementById("payment-form-expiration-month").value;
+    var expirationYear = document.getElementById("payment-form-expiration-year").value;
     // for demo purpose. below is actual keyword used to search.
     // var key = document.getElementById(generateSearchSongItem"main_search_box_key_word").nodeValue;
     if (accountName === "") {
@@ -253,33 +273,97 @@ function signUp() {
         alert("Confirm password is not match!");
         return;
     }
-    return true;
-//    var loader = document.createElement(TAG_DIV);
-//    var button = document.getElementById("btn_sign_up");
-//    loader.classList.add(CLASS_LOADER);
-//    button.disabled = true;
-//    button.appendChild(loader);
-//    var xhttp; 
-//    xhttp = new XMLHttpRequest();
-//    xhttp.onreadystatechange = function() {
-//      if (this.readyState == 4 && this.status == 200) {
-//        var obj = JSON.parse(this.responseText);
-//          for (var i = 0; i < obj.length; i++) {
-//              var songList = generateSearchSongItem(obj[i].songName, obj[i].musician, false, (obj[i].price == 0), i);
-//              document.getElementById("side_bench_search_list").appendChild(songList);
-//              songList.style.animation = "fadein 0.4s";
-//          }
-//      }
-//    };
-//    xhttp.open("GET", "search.do?Key="+key, true);
-//    xhttp.send();
-//    setTimeout(function () {
-//      signUpSuccessful(userName);
-//      login(userName);
-//      button.removeChild(loader);
-//      onTermOfServiceCheckboxChange(button);
-//      $("#modal_sign_up").modal('hide');
-//  }, 4000);
+    if (name === "") {
+        alert("Please input Payment Name!");
+        return;
+    }
+    if (addressLine1 === "") {
+        alert("Please input Address Line1!");
+        return;
+    }
+    
+    if (addressLine2 === "") {
+        alert("Please input Address Line2!");
+        return;
+    }
+    if (addressZip === "") {
+        alert("Please input Address Zip!");
+        return;
+    }
+    if (addressCountry === "") {
+        alert("Please input Address Country!");
+        return;
+    }
+    if (cardNumber === "") {
+        alert("Please input Card Number!");
+        return;
+    }
+    if (cvvCode === "") {
+        alert("Please input Cvv Code!");
+        return;
+    }
+    if (expirationMonth === "") {
+        alert("Please input Expiration Month!");
+        return;
+    }
+    if (expirationYear === "") {
+        alert("Please input Expiration Year!");
+        return;
+    }
+    var loader = document.createElement(TAG_DIV);
+    var button = document.getElementById("btn_sign_up");
+    loader.classList.add(CLASS_LOADER);
+    button.disabled = true;
+    button.appendChild(loader);
+    var xhttp; 
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        if(this.responseText == "success"){
+          setTimeout(function () {
+                signUpSuccessful(accountName);
+                login(accountName);
+                button.removeChild(loader);
+                onTermOfServiceCheckboxChange(button);
+                $("#modal_sign_up").modal('hide');
+          }, 1000);
+        }else{
+            setTimeout(function () {
+              button.removeChild(loader);
+              onTermOfServiceCheckboxChange(button);
+              alert("Sign up Fail!!!");
+          }, 1000);
+        }
+      }
+      return false;
+    };
+    var month = 1;
+    var year = 1;
+    try{
+        month = parseInt(expirationMonth);
+    }catch(Exception){
+        alert("Expiration Month must be number!")
+        return false;
+    }
+    try{
+        year = parseInt(expirationYear);
+    }catch(Exception){
+        alert("Expiration Year must be number!")
+        return false;
+    }
+    var params = "accountId="+accountId
+            +"&"+"password="+password
+            +"&"+"accountName="+accountName
+            +"&"+"name="+name
+            +"&"+"addressLine1=" + addressLine1
+            +"&"+"addressLine2=" + addressLine2
+            +"&"+"addressZip=" + addressZip
+            +"&"+"addressCountry=" + addressCountry
+            +"&"+"cardNumber=" + cardNumber
+            +"&"+"cvvCode=" + cvvCode
+            +"&"+"expiration=" + expirationYear+"-"+expirationMonth;
+    xhttp.open("POST", "signup.do?"+params, true);
+    xhttp.send();
 }
 
 function signUpSuccessful(userName) {
@@ -305,12 +389,13 @@ function loginFormLogin() {
       return;
     }
     var loader = document.createElement(TAG_DIV);
-    var button = document.getElementById("signin-button");
+    var button = document.getElementById("button-sign-in");
     loader.classList.add(CLASS_LOADER);
     button.disabled = true;
     button.appendChild(loader);
     var xhttp;    
     xhttp = new XMLHttpRequest();
+    var param = "accountId="+accountId+"&"+"password="+password;
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if(this.responseText == "success"){
@@ -332,9 +417,11 @@ function loginFormLogin() {
         }
 
       }
+      return false;
     };
-    xhttp.open("GET", "login.do?accountId="+accountId+"&"+"password="+password, true);
+    xhttp.open("POST", "login.do?accountId="+accountId+"&"+"password="+password, true);
     xhttp.send();
+    return false;
 }
 
 function logout() {
@@ -364,7 +451,7 @@ function addMySong() {
                 if (DemoBoughtList[i] == true) {
                     var songList = generateSearchSongItem(DemoSongList[i], DemoMusicianList[i], DemoBoughtList[i], DemoFreeList[i], i);
                     document.getElementById("side_bench_search_list").appendChild(songList);
-                    songList.style.animation = "fadein 0.4s";
+                    songList.style.animation = "EFFECT_FADEIN";
                 }
             }
         }
@@ -394,7 +481,7 @@ function addMyList() {
             if (DemoBoughtList[i] == true) {
                 var songList = generateSearchSongItem(DemoSongList[i], DemoMusicianList[i], DemoBoughtList[i], DemoFreeList[i], i);
                 document.getElementById("side_bench_search_list").appendChild(songList);
-                songList.style.animation = "fadein 0.4s";
+                songList.style.animation = "EFFECT_FADEIN";
             }
         }
     }

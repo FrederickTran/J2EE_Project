@@ -23,6 +23,7 @@
         <action input="/res" name="sampleActionform" path="/login" scope="request" type="com.j2ee.BeanAction.sampleBeanAction" validate="false"/>
         <action name="SongActionForm" path="/search" scope="request" type="com.j2ee.BeanAction.SongAction" validate="false"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        <action  name="SignUpActionForm" path="/signup" scope="request" type="com.j2ee.BeanAction.SignUpAction"/>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
