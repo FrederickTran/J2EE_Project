@@ -41,6 +41,8 @@
         
         <!-- Play list, Player Playlist -->
         <link href="css/playlist/playlist.css" rel="stylesheet" type="text/css"/>
+        <script src="js/playerplaylist.js"></script>
+        <script src="js/searchlist.js"></script>
         
         <!-- Navigation -->
         <link href="css/navigation/navigation.css" rel="stylesheet" type="text/css"/>

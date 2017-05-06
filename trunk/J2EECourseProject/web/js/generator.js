@@ -110,7 +110,7 @@ function generateSearchSongItem(songName, musician, isBought, isFree, id) {
     result.appendChild(splitbarElement);
 
     /*Callback*/
-    result.onclick = function () {addSongToPlayList(songName, musician, isBought, isFree);};
+    result.onclick = function () {action_addSongToPlayList(songName, musician, isBought, isFree, id);};
     result.id = id;
 
     return result;
