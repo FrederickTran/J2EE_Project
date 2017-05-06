@@ -74,17 +74,17 @@ function action_Play() {
 }
 
 function action_Skip(ev) {
-    var targetTime = ev.pageX - UI_timeNavigator.offsetLeft - UI_songInfo.offsetLeft;
+    var targetTime = ev.pageX - UI_timeNavigator.getBoundingClientRect().left;
     var totalTime = window.getComputedStyle(UI_timeNavigator).getPropertyValue('width');
     totalTime = parseFloat(totalTime.substr(0, totalTime.length - 2));
     audioControler.currentTime = (targetTime / totalTime) * audioControler.duration;
     calback_UpdateProgressBar();
     
-    // alert(targetTime.toString() +'/'+ ev.pageX.toString() +'/'+ UI_songInfo.offsetLeft.toString()); // DEBUG PURPOSE
+    // alert(targetTime.toString() +'/'+ ev.pageX.toString() +'/'+ UI_timeNavigator.offsetLeft.toString()); // DEBUG PURPOSE
 }
 
 function action_AdjustVolume(ev) {
-    var targetLevel = ev.pageX - UI_soundNavigator.offsetLeft - UI_songInfo.offsetLeft;
+    var targetLevel = ev.pageX - UI_soundNavigator.getBoundingClientRect().left;
     var highestLevel = window.getComputedStyle(UI_soundNavigator).getPropertyValue('width');
     highestLevel = parseFloat(highestLevel.substr(0, highestLevel.length - 2));
     
