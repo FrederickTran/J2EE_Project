@@ -23,6 +23,7 @@
 .has_scrollbar {
     overflow: hidden;
     overflow-y: auto;
+    height: 500px; /*DESIGN HARDCODE*/
 }
 
 .has_scrollbar::-webkit-scrollbar-track {

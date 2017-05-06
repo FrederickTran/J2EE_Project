@@ -12,7 +12,7 @@
         <html:base/>
         <%@include file="genericInclude.jsp" %>
     </head>
-    <body style="background-color: white">
+    <body style="background-color: white; overflow: hidden">
         
         <logic:notPresent name="org.apache.struts.action.MESSAGE" scope="application">
             <div  style="color: red">

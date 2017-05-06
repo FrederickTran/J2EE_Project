@@ -28,6 +28,7 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/generic_values.js"></script>
         <script src="js/generic_function.js"></script>
+        <script src="js/generic_variables.js"></script>
         <script src="js/link_table.js"></script>
         <script src="js/generator.js"></script>
         <script src="js/index_action.js"></script>
