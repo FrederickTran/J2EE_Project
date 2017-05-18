@@ -50,5 +50,8 @@
         
         <!-- Sign In Sign Up -->
         <link href="css/signin_signup/signin_signup.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Socials -->
+        <link href="css/social/social.css" rel="stylesheet" type="text/css"/>
     </head>
 </html>

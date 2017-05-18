@@ -18,14 +18,16 @@
                     <%@include file="mediaplayer.jsp" %>
                 </div>
                 <div class="row no_gutter">
+                    <%@include file="social.jsp" %>
+                </div>
                     <div class="has_scrollbar">
                         <div id="song_list_player" class="song_list">
 
                         </div>
                     </div>
+                </div>
             </div>
-            </div>
-            
+
         </div>
     </body>
 </html>
