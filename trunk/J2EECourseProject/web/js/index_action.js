@@ -6,7 +6,7 @@ var DemoMusicianList = ["L.v Beethoven", "L.v Beethoven", "J.S Bach", "J. Pachel
 window.onload = onLoad;
 function onLoad(){
     $('#search-form').submit(function () {
-        searchWithKey();
+        renewSeachListByKey();
         return false;
     });
     $('#login-form').submit(function () {
@@ -54,21 +54,13 @@ function relocateSearchBox(seachBenchCall, mediaBenchCall) {
     }
 }
 
-function searchWithKey()
+function relocate()
 {
-    var searchBench = $("#main_search_box");
-    if (searchBench.width() > 0)
-    {
-        renewSeachListByKey();
-    }
-    else
+    var searchBench = $("#side_bench_search_list");
+    if (searchBench.width() == 0)
     {
         searchBench.width("33%");
         relocateSearchBox(true, false);
-        //searchBench.addEventListener("transitioned webkitTransitioned oTransitionEnd MSTransitionEnd", renewSeachListByKey());
-        setTimeout(function () {
-            renewSeachListByKey();
-        }, 400);
     }
     return false;
 }
@@ -76,29 +68,30 @@ function searchWithKey()
 function renewSeachListByKey()
 {
     removeAllChild("side_bench_search_list");
-
+    var searchlist = document.getElementById("play-list");
+    searchlist.style.display = "block";
     var key = document.getElementById("main_search_box_key_word").value;
-    // for demo purpose. below is actual keyword used to search.
-    // var key = document.getElementById(generateSearchSongItem"main_search_box_key_word").nodeValue;
     
-    
-      var xhttp;    
-      if (key == "") {
-        return;
+    var xhttp;    
+    if (key == "") {
+      return;
+    }
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var obj = JSON.parse(this.responseText);
+          for (var i = 0; i < obj.length; i++) {
+              var songList = generateSearchSongItem(obj[i].songName, obj[i].musicianName, false, (obj[i].price == 0), i);
+              document.getElementById("side_bench_search_list").appendChild(songList);
+              songList.style.animation = EFFECT_SLIDEIN;
+          }
+          if(obj.length > 0){
+              relocate();
+          }
       }
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var obj = JSON.parse(this.responseText);
-            for (var i = 0; i < obj.length; i++) {
-                var songList = generateSearchSongItem(obj[i].songName, obj[i].musician, false, (obj[i].price == 0), i);
-                document.getElementById("side_bench_search_list").appendChild(songList);
-                songList.style.animation = "EFFECT_FADEIN";
-            }
-        }
-      };
-      xhttp.open("GET", "search.do?Key="+key, true);
-      xhttp.send();
+    };
+    xhttp.open("GET", "search.do?Key="+key, true);
+    xhttp.send();
 }
 
 function randomPlaylist()
@@ -120,7 +113,7 @@ function randomPlaylist()
                         else {
                             var songList = addSongToPlayList(DemoSongList[i], DemoMusicianList[i], DemoBoughtList[i], DemoFreeList[i], i);
                             document.getElementById("side_bench_search_list").appendChild(songList);
-                            songList.style.animation = "EFFECT_FADEIN";
+                            songList.style.animation = "slidein 0.5s";
                         }
                     }
                 }
@@ -159,20 +152,20 @@ function playSong(songName, musician, isBought, isFree)
         return;
     }
 
-    if (isBought == true || isFree == true)
-    {
-        document.getElementById("media_player_demo_sign").style.display = "none";
-        /*Play full song*/
-    }
-    else
-    {
-        document.getElementById("media_player_demo_sign").style.display = "inherit";
-        /*Play demo 10s*/
-    }
+//    if (isBought == true || isFree == true)
+//    {
+//        document.getElementById("media_player_demo_sign").style.display = "none";
+//        /*Play full song*/
+//    }
+//    else
+//    {
+//        document.getElementById("media_player_demo_sign").style.display = "inherit";
+//        /*Play demo 10s*/
+//    }
 
     var mediaBench = $("#side_bench_media_player");
-    var songNameHolder = document.getElementById("playing_song_name");
-    var songMusicianHolder = document.getElementById("playing_song_musician");
+    var songNameHolder = document.getElementById("song_name");
+    var songMusicianHolder = document.getElementById("musician_name");
     
     if (mediaBench.width() > 0)
     {
@@ -187,7 +180,7 @@ function playSong(songName, musician, isBought, isFree)
         var mediaElement = document.getElementById("media_player_UI");
         setTimeout(function () {
             mediaElement.style.display = "block";
-            mediaElement.style.animation = "EFFECT_FADEIN";
+            mediaElement.style.animation = "EFFECT_SLIDEIN";
         }, 400);
 
         setTimeout(function () {
@@ -201,25 +194,26 @@ function playSong(songName, musician, isBought, isFree)
 
 function addSongToPlayList(songName, musician, isBought, isFree)
 {
-//    if (isLoggedIn() == false && isFree == false)
-//    {
-//        $("#modal_sign_in").modal('show');
-//        return;
-//    }
-//
-//    if (isBought == false && isFree == false)
-//    {
-//        $("#modal_buy_confirm").modal('show');
-//        /*display buy confirm*/
-//    }
-//    else
+    if (isLoggedIn() == false && isFree == false)
     {
+        $("#modal_sign_in").modal('show');
+        return;
+    }
+
+    if (isBought == false && isFree == false)
+    {
+        $("#modal_buy_confirm").modal('show');
+        /*display buy confirm*/
+    }
+    else
+    {
+        $("#player-playlist").css("display","block");
         if ($("#side_bench_media_player").width() > 0)
         {
             var generatedSongElement = generatePlaylistSongItem(songName, musician);
             var playList = document.getElementById("song_list_player");
             playList.appendChild(generatedSongElement);
-            generatedSongElement.style.animation = "slidein 0.5s";
+            generatedSongElement.style.animation = EFFECT_SLIDEIN;
             playList.scrollTop = playList.scrollHeight;
         }
         else
@@ -317,6 +311,8 @@ function signUp() {
     button.appendChild(loader);
     var xhttp; 
     xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "signup.do", true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if(this.responseText == "success"){
@@ -331,7 +327,7 @@ function signUp() {
             setTimeout(function () {
               button.removeChild(loader);
               onTermOfServiceCheckboxChange(button);
-              alert("Sign up Fail!!!");
+              alert("Signup fail!");
           }, 1000);
         }
       }
@@ -362,8 +358,7 @@ function signUp() {
             +"&"+"cardNumber=" + cardNumber
             +"&"+"cvvCode=" + cvvCode
             +"&"+"expiration=" + expirationYear+"-"+expirationMonth;
-    xhttp.open("POST", "signup.do?"+params, true);
-    xhttp.send();
+    xhttp.send(params);
 }
 
 function signUpSuccessful(userName) {
@@ -374,7 +369,15 @@ function signUpSuccessful(userName) {
 function login(userName) {
     document.getElementById("nav_after_login").style.display = "inherit";
     document.getElementById("nav_before_login").style.display = "none";
-    renewSeachListByKey();
+}
+function displaySnackbar(result){
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+    x.innerHTML = result
+    // Add the "show" class to DIV
+    x.className = "show";
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
 function loginFormLogin() {
@@ -394,33 +397,29 @@ function loginFormLogin() {
     button.disabled = true;
     button.appendChild(loader);
     var xhttp;    
+    var params = "accountId="+accountId+"&"+"password="+password
     xhttp = new XMLHttpRequest();
-    var param = "accountId="+accountId+"&"+"password="+password;
+    xhttp.open("POST", "login.do", true);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if(this.responseText == "success"){
-          setTimeout(function () {
-              login(accountId);
-              button.removeChild(loader);
-              button.disabled = false;
-              onTermOfServiceCheckboxChange(button);
-              $("#modal_sign_in").modal('hide');
-              alert("Login Success!!!");
-          }, 1000);
+            login(accountId);
+            button.removeChild(loader);
+            button.disabled = false;
+            onTermOfServiceCheckboxChange(button);
+            $("#modal_sign_in").modal('hide');
+            displaySnackbar("Login Success!");
         }else{
-            setTimeout(function () {
-              button.removeChild(loader);
-              button.disabled = false;
-              onTermOfServiceCheckboxChange(button);
-              alert("Login Fail!!!");
-          }, 1000);
+            $("#error_user").text("Wrong username/password!");
+            button.removeChild(loader);
+            button.disabled = false;
+            onTermOfServiceCheckboxChange(button);
         }
-
       }
       return false;
     };
-    xhttp.open("POST", "login.do?accountId="+accountId+"&"+"password="+password, true);
-    xhttp.send();
+    xhttp.send(params);
     return false;
 }
 
@@ -441,9 +440,6 @@ function addMySong() {
     if (searchBench.width() > 0)
     {
         removeAllChild("side_bench_search_list");
-
-        // for demo purpose. below is actual keyword used to search.
-        // var key = document.getElementById("main_search_box_key_word").nodeValue;
         for (j = 0; j < 5; j++)
         {
             for (i = 0; i < DemoSongList.length; i++)

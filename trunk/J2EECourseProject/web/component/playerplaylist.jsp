@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="row main no_gutter main_content_table">
+        
             <div class="container-fluid main_content_table_cell full_expand smooth_transform" id="side_bench_media_player">
                 <div class="row no_gutter">
                     <%@include file="mediaplayer.jsp" %>
@@ -20,14 +20,13 @@
                 <div class="row no_gutter">
                     <%@include file="social.jsp" %>
                 </div>
-                    <div class="has_scrollbar">
-                        <div id="song_list_player" class="song_list">
-
-                        </div>
+                <div class="row no_gutter">
+                    <div id="song_list_player" class="song_list has_scrollbar">
+                        
                     </div>
                 </div>
+                
             </div>
-
-        </div>
+        
     </body>
 </html>

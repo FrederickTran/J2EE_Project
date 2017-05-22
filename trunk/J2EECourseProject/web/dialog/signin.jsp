@@ -12,6 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <!-- The actual snackbar -->
+        <div id="snackbar"></div>
         <div id="modal_sign_in" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -24,6 +26,7 @@
                             <div class="container-fluid">
 
                                 <div class="row">
+                                    <div class="error" id="error_user"></div>
                                     <label for="user_input_sign_in_ID" class="col-md-3">Login ID:</label>
                                     <input type="text" id="user_input_sign_in_ID"/>
                                 </div>

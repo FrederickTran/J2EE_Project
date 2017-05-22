@@ -279,5 +279,11 @@ script {
     transition: all 0.4s cubic-bezier(0.02, 0.1, 0.47, 1);
 }
 
+#side_bench_search_list{
+    width: 0%;
+}
+#side_bench_media_player{
+    width: 0%;
+}
 
 

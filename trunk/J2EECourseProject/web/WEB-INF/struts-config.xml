@@ -7,6 +7,9 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="SongActionForm" type="com.j2ee.BeanForm.SongActionForm"/>
+        <form-bean name="SingerActionForm" type="com.j2ee.BeanForm.SingerActionForm"/>
+        <form-bean name="MusicianActionForm" type="com.j2ee.BeanForm.MusicianActionForm"/>
         <form-bean name="sampleActionform" type="com.j2ee.BeanForm.sampleActionform"/>
     
     </form-beans>
@@ -20,6 +23,15 @@
     </global-forwards>
 
     <action-mappings>
+        <action path="/songs" scope="request" type="com.j2ee.BeanAction.SongAdminAction">
+            <forward name="success" path="/SongAdmin.jsp"/>
+            <forward name="fail" path="/welcomeStruts.jsp"/>
+            <forward name="addeditsong" path="/AddEditSongAdmin.jsp"/>
+        </action>
+        <action name="SongActionForm" path="/addeditsong" scope="request" type="com.j2ee.BeanAction.AddEditSongAction" validate="false">
+            <forward name="success" path="/songs.do"/>
+            <forward name="fail" path="/addeditsong.do"/>
+        </action>
         <action input="/res" name="sampleActionform" path="/login" scope="request" type="com.j2ee.BeanAction.sampleBeanAction" validate="false"/>
         <action name="SongActionForm" path="/search" scope="request" type="com.j2ee.BeanAction.SongAction" validate="false"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>

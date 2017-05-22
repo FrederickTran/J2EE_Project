@@ -7,7 +7,7 @@ package com.j2ee.BeanAction;
 
 import com.google.gson.Gson;
 import com.j2ee.BeanForm.SongActionForm;
-import com.j2ee.DataTableBridge.ConnectDB;
+import com.j2ee.DataTableBridge.SongDB;
 import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -40,7 +40,7 @@ public class SongAction extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         String key=(String)request.getParameter("Key");
-        List<SongActionForm> list = ConnectDB.searchByKey(key);
+        List<SongActionForm> list = SongDB.searchByKey(key);
         String result = "";
         Gson gson = new Gson();
         result = gson.toJson(list);

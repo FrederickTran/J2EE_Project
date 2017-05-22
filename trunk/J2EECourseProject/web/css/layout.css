@@ -134,3 +134,11 @@ script {
 .smooth_transform {
     transition: all 0.4s cubic-bezier(0.02, 0.1, 0.47, 1);
 }
+
+#play-list{
+    display: none;
+}
+
+#player-playlist{
+    display: none;
+}

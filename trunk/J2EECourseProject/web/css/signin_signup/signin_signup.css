@@ -92,3 +92,7 @@ and open the template in the editor.
 #user_input_user_confirm_password{
     width: 50%;
 }
+.error{
+    color: red;
+    text-align: center;
+}

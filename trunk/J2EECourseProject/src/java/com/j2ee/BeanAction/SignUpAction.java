@@ -6,7 +6,7 @@
 package com.j2ee.BeanAction;
 
 import com.j2ee.BeanForm.SignUpActionForm;
-import com.j2ee.DataTableBridge.ConnectDB;
+import com.j2ee.DataTableBridge.UserDB;
 import java.io.PrintWriter;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
@@ -52,7 +52,7 @@ public class SignUpAction extends org.apache.struts.action.Action {
         String cardNumber = (String)request.getParameter("cardNumber");
         String cvvCode = (String)request.getParameter("cvvCode");
         String expiration = (String)request.getParameter("expiration");
-        if(ConnectDB.signUp(accountId, password, accountName, name, addressLine1, addressLine2, addressZip, addressCountry, cardNumber, cvvCode, expiration)){
+        if(UserDB.signUp(accountId, password, accountName, name, addressLine1, addressLine2, addressZip, addressCountry, cardNumber, cvvCode, expiration)){
             result = SUCCESS;
         }
         else{

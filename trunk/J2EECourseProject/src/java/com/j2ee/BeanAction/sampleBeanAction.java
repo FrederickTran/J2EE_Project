@@ -12,9 +12,8 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.j2ee.BeanForm.sampleActionform;
-import com.j2ee.DataTableBridge.ConnectDB;
 import org.jboss.weld.event.Status;
-import com.j2ee.DataTableBridge.TABLE_DEMO_Bridge;
+import com.j2ee.DataTableBridge.UserDB;
 import java.io.PrintWriter;
 
 /**
@@ -25,7 +24,8 @@ public class sampleBeanAction extends org.apache.struts.action.Action {
 
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
-    private static final String FAILURE = "failure";
+    private static final String WRONGPASS = "wrongpass";
+    private static final String NOUSER = "nouser";
 
     /**
      * This is the action called from the Struts framework.
@@ -45,12 +45,17 @@ public class sampleBeanAction extends org.apache.struts.action.Action {
         String accountId=(String)request.getParameter("accountId");
         String password=(String)request.getParameter("password");
         String result = "";
-        if (ConnectDB.checkLogin(accountId, password))
-        {
-            result = SUCCESS;
-        }
-        else{
-            result = FAILURE;
+        int r = UserDB.checkLogin(accountId, password);
+        switch(r){
+            case 1:
+                result = SUCCESS;
+                break;
+            case 0:
+                result = WRONGPASS;
+                break;
+            case -1:
+                result = NOUSER;
+                break;
         }
         response.setContentType("text/text;charset=utf-8");
         response.setHeader("cache-control", "no-cache");

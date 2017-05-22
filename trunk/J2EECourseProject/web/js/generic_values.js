@@ -35,3 +35,4 @@ var RESOURCE_SONG_ITEM = 'mar/disk_mp3.png';
 var ID_SONG_ITEM_CONTROL_PANEL = 'control_panel';
 
 var EFFECT_FADEIN = "fadein 0.4s";
+var EFFECT_SLIDEIN = "slidein 0.5s";
