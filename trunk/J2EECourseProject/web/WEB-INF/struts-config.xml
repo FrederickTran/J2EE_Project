@@ -7,11 +7,12 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="NewStrutsActionForm" type="com.j2ee.BeanForm.NewStrutsActionForm"/>
         <form-bean name="SongActionForm" type="com.j2ee.BeanForm.SongActionForm"/>
         <form-bean name="SingerActionForm" type="com.j2ee.BeanForm.SingerActionForm"/>
         <form-bean name="MusicianActionForm" type="com.j2ee.BeanForm.MusicianActionForm"/>
         <form-bean name="sampleActionform" type="com.j2ee.BeanForm.sampleActionform"/>
-    
+        <form-bean name="CommentActionForm" type="com.j2ee.BeanForm.CommentActionForm"/>
     </form-beans>
     
     <global-exceptions>
@@ -36,6 +37,8 @@
         <action name="SongActionForm" path="/search" scope="request" type="com.j2ee.BeanAction.SongAction" validate="false"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
         <action  name="SignUpActionForm" path="/signup" scope="request" type="com.j2ee.BeanAction.SignUpAction"/>
+        <action  name="CommentActionForm" path="/comment" scope="request" type="com.j2ee.BeanAction.CommentAction"/>
+        <action  name="CommentListActionForm" path="/listcomment" scope="request" type="com.j2ee.BeanAction.CommentListAction"/>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

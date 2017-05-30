@@ -495,3 +495,59 @@ function addMyList() {
 function moveToSong(index) {
 
 }
+
+function Comment() {
+    var comment = document.getElementById("user-input-comment").value;
+    var songId = "1";
+    var accountId = "admin";
+    if (comment === "") {
+        alert("Please input Comment!");
+        return;
+    }
+    var xhttp;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText == "success") {
+                alert("comment success!")
+                ShowListComment();
+            } else {
+                setTimeout(function () {
+                    alert("Comment Fail!!!");
+                }, 1000);
+            }
+        }
+        return false;
+    };
+    var params = "comment=" + comment
+            + "&" + "songId=" + songId
+            + "&" + "accountId=" + accountId;
+    xhttp.open("POST", "comment.do?" + params, true);
+    xhttp.send();
+}
+
+function ShowListComment()
+{
+
+    
+    var listComment = document.getElementById("menu2");
+    listComment.style.display = "block";
+    removeAllChild("list-comment");
+    var xhttp;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            for (var i = 0; i < obj.length; i++) {
+                var commentList = generateCommentItem(obj[i].accountName, obj[i].comment);
+                document.getElementById("menu2").appendChild(commentList);
+                commentList.style.animation = EFFECT_SLIDEIN;
+            }
+            if (obj.length > 0) {
+                relocate();
+            }
+        }
+    };
+    xhttp.open("GET", "listcomment.do", true);
+    xhttp.send();
+}

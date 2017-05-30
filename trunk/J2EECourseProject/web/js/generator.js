@@ -169,4 +169,17 @@ function generatePlaylistSongItem(songName, musician) {
     result.onclick = function () {playSong(songName, musician, true, true);};
 
     return result;
+    }
+    
+    /**/
+function generateCommentItem(accountName,Comment) {
+    var result = document.createElement(TAG_P);
+
+    /*Song name*/
+    var listUserElement = document.createElement(TAG_P);
+    listUserElement.innerHTML = accountName + ":   " + Comment;
+    result.appendChild(listUserElement);
+ 
+    
+    return result;
 }
