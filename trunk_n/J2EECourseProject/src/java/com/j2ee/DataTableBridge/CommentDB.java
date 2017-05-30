@@ -33,7 +33,8 @@ public class CommentDB {
                 comment.setAccountId(rs.getString("AccountId"));
                 comment.setAccountName(rs.getString("AccountName"));
                 comment.setSongId(rs.getInt("SongId"));
-                comment.setTimeStam(rs.getDate("TimeStam"));
+                //comment.setTimeStam(rs.getDate("TimeStam"));
+                commentList.add(comment);
             }
             
         } catch (SQLException ex) {

@@ -169,28 +169,17 @@ function generatePlaylistSongItem(songName, musician) {
     result.onclick = function () {playSong(songName, musician, true, true);};
 
     return result;
-    
+    }
     
     /**/
-    function generateCommentItem(accountName,Comment) {
-    var result = document.createElement(TAG_DIV);
-    result.classList.add(CLASS_SONG_ITEM);
-    result.classList.add(CLASS_UNSELECTABLE_OBJECT);
+function generateCommentItem(accountName,Comment) {
+    var result = document.createElement(TAG_P);
 
     /*Song name*/
     var listUserElement = document.createElement(TAG_P);
-    listUserElement.classList.add(CLASS_SONG_ITEM_NAME);
-    listUserElement.classList.add(CLASS_UNSELECTABLE_OBJECT);
-    listUserElement.textContent = Comment;
-    songNameWrapper.appendChild(listUserElement);
+    listUserElement.innerHTML = accountName + ":   " + Comment;
+    result.appendChild(listUserElement);
+ 
     
-    /*Musician*/
-    var commentNameElement = document.createElement(TAG_P);
-    commentNameElement.classList.add(CLASS_SONG_ITEM_MUSICIAN);
-    commentNameElement.classList.add(CLASS_UNSELECTABLE_OBJECT);
-    commentNameElement.textContent = accountName;
-    result.appendChild(commentNameElement);
-
     return result;
-}
 }

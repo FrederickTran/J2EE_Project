@@ -4,7 +4,7 @@ var DemoFreeList = [false, false, true, true, false, true, false];
 var DemoMusicianList = ["L.v Beethoven", "L.v Beethoven", "J.S Bach", "J. Pachelbel", "A. Vivaldi", "J.S Bach", "G.F Handel"];
 
 window.onload = onLoad;
-function onLoad(){
+function onLoad() {
     $('#search-form').submit(function () {
         renewSeachListByKey();
         return false;
@@ -21,18 +21,18 @@ function onLoad(){
 
 function onSearchBoxKeyPress(keyPress)
 {
-	if (keyPress.keyCode == 13)
-	{
-		searchWithKey();
-	}
+    if (keyPress.keyCode == 13)
+    {
+        searchWithKey();
+    }
 }
 
 function onSignInKeyPress(keyPress)
 {
-	if (keyPress.keyCode == 13)
-	{
-		loginFormLogin();
-	}
+    if (keyPress.keyCode == 13)
+    {
+        loginFormLogin();
+    }
 }
 
 function relocateSearchBox(seachBenchCall, mediaBenchCall) {
@@ -43,12 +43,10 @@ function relocateSearchBox(seachBenchCall, mediaBenchCall) {
     if (searchBenchVisible && mediaBenchVisible)
     {
         searchBox.width("128%");
-    }
-    else if (searchBenchVisible)
+    } else if (searchBenchVisible)
     {
         searchBox.width("115%");
-    }
-    else if (mediaBenchVisible)
+    } else if (mediaBenchVisible)
     {
         searchBox.width("113%");
     }
@@ -71,26 +69,26 @@ function renewSeachListByKey()
     var searchlist = document.getElementById("play-list");
     searchlist.style.display = "block";
     var key = document.getElementById("main_search_box_key_word").value;
-    
-    var xhttp;    
+
+    var xhttp;
     if (key == "") {
-      return;
+        return;
     }
     xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var obj = JSON.parse(this.responseText);
-          for (var i = 0; i < obj.length; i++) {
-              var songList = generateSearchSongItem(obj[i].songName, obj[i].musicianName, false, (obj[i].price == 0), i);
-              document.getElementById("side_bench_search_list").appendChild(songList);
-              songList.style.animation = EFFECT_SLIDEIN;
-          }
-          if(obj.length > 0){
-              relocate();
-          }
-      }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            for (var i = 0; i < obj.length; i++) {
+                var songList = generateSearchSongItem(obj[i].songName, obj[i].musicianName, false, (obj[i].price == 0), i);
+                document.getElementById("side_bench_search_list").appendChild(songList);
+                songList.style.animation = EFFECT_SLIDEIN;
+            }
+            if (obj.length > 0) {
+                relocate();
+            }
+        }
     };
-    xhttp.open("GET", "search.do?Key="+key, true);
+    xhttp.open("GET", "search.do?Key=" + key, true);
     xhttp.send();
 }
 
@@ -104,13 +102,12 @@ function randomPlaylist()
         for (j = 0; j < 5; j++) {
             for (i = 0; i < DemoSongList.length; i++) {
                 if ((isLoggedIn() == true && DemoBoughtList[i] == true) ||
-                    DemoFreeList[i] == true) {
+                        DemoFreeList[i] == true) {
                     if (Math.floor(Math.random() * 10) % 4 < 3 || gotPlay == false) {
                         if (gotPlay == false) {
                             playSong(DemoSongList[i], DemoMusicianList[i], DemoBoughtList[i], DemoFreeList[i]);
                             gotPlay = true;
-                        }
-                        else {
+                        } else {
                             var songList = addSongToPlayList(DemoSongList[i], DemoMusicianList[i], DemoBoughtList[i], DemoFreeList[i], i);
                             document.getElementById("side_bench_search_list").appendChild(songList);
                             songList.style.animation = "slidein 0.5s";
@@ -119,8 +116,7 @@ function randomPlaylist()
                 }
             }
         }
-    }
-    else
+    } else
     {
         mediaBench.css("display: block; width: 25%;");
         mediaBench.width("25%");
@@ -134,7 +130,7 @@ function randomPlaylist()
         setTimeout(function () {
             mediaElement.style.opacity = "1";
             randomPlaylist();
-        },800);
+        }, 800);
 
         relocateSearchBox(false, true);
     }
@@ -166,13 +162,12 @@ function playSong(songName, musician, isBought, isFree)
     var mediaBench = $("#side_bench_media_player");
     var songNameHolder = document.getElementById("song_name");
     var songMusicianHolder = document.getElementById("musician_name");
-    
+
     if (mediaBench.width() > 0)
     {
         songNameHolder.textContent = songName;
         songMusicianHolder.textContent = musician;
-    }
-    else
+    } else
     {
         mediaBench.css("display: block; width: 25%;");
         mediaBench.width("25%");
@@ -186,7 +181,7 @@ function playSong(songName, musician, isBought, isFree)
         setTimeout(function () {
             mediaElement.style.opacity = "1";
             playSong(songName, musician, isBought, isFree);
-        },800);
+        }, 800);
 
         relocateSearchBox(false, true);
     }
@@ -204,10 +199,9 @@ function addSongToPlayList(songName, musician, isBought, isFree)
     {
         $("#modal_buy_confirm").modal('show');
         /*display buy confirm*/
-    }
-    else
+    } else
     {
-        $("#player-playlist").css("display","block");
+        $("#player-playlist").css("display", "block");
         if ($("#side_bench_media_player").width() > 0)
         {
             var generatedSongElement = generatePlaylistSongItem(songName, musician);
@@ -215,8 +209,7 @@ function addSongToPlayList(songName, musician, isBought, isFree)
             playList.appendChild(generatedSongElement);
             generatedSongElement.style.animation = EFFECT_SLIDEIN;
             playList.scrollTop = playList.scrollHeight;
-        }
-        else
+        } else
         {
             playSong(songName, musician, isBought, isFree);
         }
@@ -233,12 +226,12 @@ function signUp() {
     var accountId = document.getElementById("user_input_user_loginid").value;
     var password = document.getElementById("user_input_user_password").value;
     var rePassword = document.getElementById("user_input_user_confirm_password").value;
-    
+
     var name = document.getElementById("payment-form-name").value;
     var addressLine1 = document.getElementById("payment-form-address-1").value;
     var addressLine2 = document.getElementById("payment-form-address-2").value;
     var addressZip = document.getElementById("payment-form-address-zip").value;
-    
+
     var selectAddress = document.getElementById("payment-form-address-country");
     var addressCountry = selectAddress.options[selectAddress.selectedIndex].text;
     var cardNumber = document.getElementById("payment-form-card-number").value;
@@ -275,7 +268,7 @@ function signUp() {
         alert("Please input Address Line1!");
         return;
     }
-    
+
     if (addressLine2 === "") {
         alert("Please input Address Line2!");
         return;
@@ -309,55 +302,55 @@ function signUp() {
     loader.classList.add(CLASS_LOADER);
     button.disabled = true;
     button.appendChild(loader);
-    var xhttp; 
+    var xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.open("POST", "signup.do", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        if(this.responseText == "success"){
-          setTimeout(function () {
-                signUpSuccessful(accountName);
-                login(accountName);
-                button.removeChild(loader);
-                onTermOfServiceCheckboxChange(button);
-                $("#modal_sign_up").modal('hide');
-          }, 1000);
-        }else{
-            setTimeout(function () {
-              button.removeChild(loader);
-              onTermOfServiceCheckboxChange(button);
-              alert("Signup fail!");
-          }, 1000);
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText == "success") {
+                setTimeout(function () {
+                    signUpSuccessful(accountName);
+                    login(accountName);
+                    button.removeChild(loader);
+                    onTermOfServiceCheckboxChange(button);
+                    $("#modal_sign_up").modal('hide');
+                }, 1000);
+            } else {
+                setTimeout(function () {
+                    button.removeChild(loader);
+                    onTermOfServiceCheckboxChange(button);
+                    alert("Signup fail!");
+                }, 1000);
+            }
         }
-      }
-      return false;
+        return false;
     };
     var month = 1;
     var year = 1;
-    try{
+    try {
         month = parseInt(expirationMonth);
-    }catch(Exception){
+    } catch (Exception) {
         alert("Expiration Month must be number!")
         return false;
     }
-    try{
+    try {
         year = parseInt(expirationYear);
-    }catch(Exception){
+    } catch (Exception) {
         alert("Expiration Year must be number!")
         return false;
     }
-    var params = "accountId="+accountId
-            +"&"+"password="+password
-            +"&"+"accountName="+accountName
-            +"&"+"name="+name
-            +"&"+"addressLine1=" + addressLine1
-            +"&"+"addressLine2=" + addressLine2
-            +"&"+"addressZip=" + addressZip
-            +"&"+"addressCountry=" + addressCountry
-            +"&"+"cardNumber=" + cardNumber
-            +"&"+"cvvCode=" + cvvCode
-            +"&"+"expiration=" + expirationYear+"-"+expirationMonth;
+    var params = "accountId=" + accountId
+            + "&" + "password=" + password
+            + "&" + "accountName=" + accountName
+            + "&" + "name=" + name
+            + "&" + "addressLine1=" + addressLine1
+            + "&" + "addressLine2=" + addressLine2
+            + "&" + "addressZip=" + addressZip
+            + "&" + "addressCountry=" + addressCountry
+            + "&" + "cardNumber=" + cardNumber
+            + "&" + "cvvCode=" + cvvCode
+            + "&" + "expiration=" + expirationYear + "-" + expirationMonth;
     xhttp.send(params);
 }
 
@@ -370,14 +363,16 @@ function login(userName) {
     document.getElementById("nav_after_login").style.display = "inherit";
     document.getElementById("nav_before_login").style.display = "none";
 }
-function displaySnackbar(result){
+function displaySnackbar(result) {
     // Get the snackbar DIV
     var x = document.getElementById("snackbar");
     x.innerHTML = result
     // Add the "show" class to DIV
     x.className = "show";
     // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function () {
+        x.className = x.className.replace("show", "");
+    }, 3000);
 }
 
 function loginFormLogin() {
@@ -388,36 +383,36 @@ function loginFormLogin() {
         return;
     }
     if (password === "") {
-      alert("Please input password!");
-      return;
+        alert("Please input password!");
+        return;
     }
     var loader = document.createElement(TAG_DIV);
     var button = document.getElementById("button-sign-in");
     loader.classList.add(CLASS_LOADER);
     button.disabled = true;
     button.appendChild(loader);
-    var xhttp;    
-    var params = "accountId="+accountId+"&"+"password="+password
+    var xhttp;
+    var params = "accountId=" + accountId + "&" + "password=" + password
     xhttp = new XMLHttpRequest();
     xhttp.open("POST", "login.do", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        if(this.responseText == "success"){
-            login(accountId);
-            button.removeChild(loader);
-            button.disabled = false;
-            onTermOfServiceCheckboxChange(button);
-            $("#modal_sign_in").modal('hide');
-            displaySnackbar("Login Success!");
-        }else{
-            $("#error_user").text("Wrong username/password!");
-            button.removeChild(loader);
-            button.disabled = false;
-            onTermOfServiceCheckboxChange(button);
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText == "success") {
+                login(accountId);
+                button.removeChild(loader);
+                button.disabled = false;
+                onTermOfServiceCheckboxChange(button);
+                $("#modal_sign_in").modal('hide');
+                displaySnackbar("Login Success!");
+            } else {
+                $("#error_user").text("Wrong username/password!");
+                button.removeChild(loader);
+                button.disabled = false;
+                onTermOfServiceCheckboxChange(button);
+            }
         }
-      }
-      return false;
+        return false;
     };
     xhttp.send(params);
     return false;
@@ -451,8 +446,7 @@ function addMySong() {
                 }
             }
         }
-    }
-    else
+    } else
     {
         searchBench.width("33%");
         relocateSearchBox(true, false);
@@ -480,8 +474,7 @@ function addMyList() {
                 songList.style.animation = "EFFECT_FADEIN";
             }
         }
-    }
-    else
+    } else
     {
         searchBench.width("33%");
         relocateSearchBox(true, false);
@@ -496,55 +489,57 @@ function moveToSong(index) {
 
 }
 
-function Comment(){
+function Comment() {
     var comment = document.getElementById("user-input-comment").value;
     var songId = "1";
-    var accountId="admin";
+    var accountId = "admin";
     if (comment === "") {
         alert("Please input Comment!");
         return;
     }
-    var xhttp; 
+    var xhttp;
     xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        if(this.responseText == "success"){
-          alert("comment success!")
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            if (this.responseText == "success") {
+                alert("comment success!")
                 ShowListComment();
-        }else{
-            setTimeout(function () {
-              alert("Comment Fail!!!");
-          }, 1000);
+            } else {
+                setTimeout(function () {
+                    alert("Comment Fail!!!");
+                }, 1000);
+            }
         }
-      }
-      return false;
+        return false;
     };
-    var params = "comment="+comment
-            +"&"+"songId="+songId
-            +"&"+"accountId="+accountId;
-    xhttp.open("POST", "comment.do?"+params, true);
+    var params = "comment=" + comment
+            + "&" + "songId=" + songId
+            + "&" + "accountId=" + accountId;
+    xhttp.open("POST", "comment.do?" + params, true);
     xhttp.send();
 }
 
 function ShowListComment()
 {
+
+    
     var listComment = document.getElementById("menu2");
     listComment.style.display = "block";
-    
-    var xhttp;    
+    removeAllChild("list-comment");
+    var xhttp;
     xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var obj = JSON.parse(this.responseText);
-          for (var i = 0; i < obj.length; i++) {
-              var commentList = generateCommentItem(obj[i].Comment, obj[i].accountName);
-              document.getElementById("list-comment").appendChild(commentList);
-              commentList.style.animation = EFFECT_SLIDEIN;
-          }
-          if(obj.length > 0){
-              relocate();
-          }
-      }
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var obj = JSON.parse(this.responseText);
+            for (var i = 0; i < obj.length; i++) {
+                var commentList = generateCommentItem(obj[i].accountName, obj[i].comment);
+                document.getElementById("menu2").appendChild(commentList);
+                commentList.style.animation = EFFECT_SLIDEIN;
+            }
+            if (obj.length > 0) {
+                relocate();
+            }
+        }
     };
     xhttp.open("GET", "listcomment.do", true);
     xhttp.send();

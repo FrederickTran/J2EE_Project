@@ -44,7 +44,7 @@
                         <button type="button" class="btn btn-default" id="btn-comment" onclick="Comment()">Comment</button><br/>                   
                     <span>All Comment: </span>
                     <br/>
-                    <p id="list-comment">Comment 1</p>
+                    <div id="list-comment"></div>
                 </div>
                 <div id="menu3" class="tab-pane fade">
                     <span>Your of link:</span>

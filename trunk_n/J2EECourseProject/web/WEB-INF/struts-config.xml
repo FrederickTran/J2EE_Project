@@ -38,7 +38,7 @@
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
         <action  name="SignUpActionForm" path="/signup" scope="request" type="com.j2ee.BeanAction.SignUpAction"/>
         <action  name="CommentActionForm" path="/comment" scope="request" type="com.j2ee.BeanAction.CommentAction"/>
-        <action  name="CommentActionForm" path="/listcomment" scope="request" type="com.j2ee.BeanAction.CommentListAction"/>
+        <action  name="CommentListActionForm" path="/listcomment" scope="request" type="com.j2ee.BeanAction.CommentListAction"/>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
