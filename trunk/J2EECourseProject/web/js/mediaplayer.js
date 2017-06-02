@@ -56,6 +56,7 @@ function action_Play() {
     if (audioControler.paused)
     {
         audioControler.play();
+        UI_timeNavigator = document.getElementById('time-navigate');
         UI_playbuttonIcon.className = CONST_BUTTON_GLYPHICON_PAUSE;
         updateCallback = setInterval(calback_UpdateProgressBar, 50);
     }
