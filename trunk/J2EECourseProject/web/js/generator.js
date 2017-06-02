@@ -27,7 +27,7 @@ function createIconButton(iconFont, iconClass, callback) {
     return buttonElement;
 }
 
-function generateSearchSongItem(songName, musician, isBought, isFree, id) {
+function generateSearchSongItem(songId, songName, musician, isBought, isFree, link) {
     var result = document.createElement(TAG_DIV);
     result.classList.add(CLASS_SONG_ITEM);
     result.classList.add(CLASS_UNSELECTABLE_OBJECT);
@@ -49,7 +49,7 @@ function generateSearchSongItem(songName, musician, isBought, isFree, id) {
     controlPanel.classList.add(CLASS_UNSELECTABLE_OBJECT);
     
         /*Sub button 1: Play*/
-        controlPanel.appendChild(createIconButton(CLASS_ICON_FONT, CLASS_ICON_NAME_PLAY, function (){playSong(songName, musician, isBought, isFree);}));
+        controlPanel.appendChild(createIconButton(CLASS_ICON_FONT, CLASS_ICON_NAME_PLAY, function (){playSong(songId, songName, musician, true, true, link);}));
         /*Sub button 1: Share*/
         controlPanel.appendChild(createIconButton(CLASS_ICON_FONT, CLASS_ICON_NAME_SHARE, function (){}));
         /*Sub button 1: Bookmark (heart)*/
@@ -110,13 +110,13 @@ function generateSearchSongItem(songName, musician, isBought, isFree, id) {
     result.appendChild(splitbarElement);
 
     /*Callback*/
-    result.onclick = function () {addSongToPlayList(songName, musician, isBought, isFree, id);};
-    result.id = id;
+    result.onclick = function () {addSongToPlayList(songId, songName, musician, isBought, isFree, link);};
+    result.id = songId;
 
     return result;
 }
 
-function generatePlaylistSongItem(songName, musician) {
+function generatePlaylistSongItem(songId, songName, musician, link) {
     var result = document.createElement(TAG_DIV);
     result.classList.add(CLASS_SONG_ITEM);
     result.classList.add(CLASS_UNSELECTABLE_OBJECT);
@@ -166,7 +166,7 @@ function generatePlaylistSongItem(songName, musician) {
     result.appendChild(songNameWrapper);
 
     /*Callback*/
-    result.onclick = function () {playSong(songName, musician, true, true);};
+    result.onclick = function () {playSong(songId, songName, musician, true, true, link);};
 
     return result;
     }
@@ -177,7 +177,7 @@ function generateCommentItem(accountName,Comment) {
 
     /*Song name*/
     var listUserElement = document.createElement(TAG_P);
-    listUserElement.innerHTML = accountName + ":   " + Comment;
+    listUserElement.innerHTML = "<b>"+accountName+"</b>:   " + Comment;
     result.appendChild(listUserElement);
  
     

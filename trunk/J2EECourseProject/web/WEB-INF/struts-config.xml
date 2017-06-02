@@ -8,12 +8,11 @@
 <struts-config>
     <form-beans>
         <form-bean name="SongUploadActionForm" type="com.j2ee.BeanForm.SongUploadActionForm"/>
-        <form-bean name="NewStrutsActionForm" type="com.j2ee.BeanForm.NewStrutsActionForm"/>
         <form-bean name="SongActionForm" type="com.j2ee.BeanForm.SongActionForm"/>
         <form-bean name="SingerActionForm" type="com.j2ee.BeanForm.SingerActionForm"/>
         <form-bean name="MusicianActionForm" type="com.j2ee.BeanForm.MusicianActionForm"/>
-        <form-bean name="sampleActionform" type="com.j2ee.BeanForm.sampleActionform"/>
-        <form-bean name="CommentActionForm" type="com.j2ee.BeanForm.CommentActionForm"/>
+        <form-bean name="UserActionForm" type="com.j2ee.BeanForm.UserActionForm"/>
+    	<form-bean name="CommentActionForm" type="com.j2ee.BeanForm.CommentActionForm"/>
     </form-beans>
     
     <global-exceptions>
@@ -34,8 +33,34 @@
             <forward name="success" path="/songs.do"/>
             <forward name="fail" path="/addeditsong.do"/>
         </action>
+        <action name="MusicianActionForm" path="/musicians" scope="request" type="com.j2ee.BeanAction.MusicianAdminAction" validate="false">
+            <forward name="success" path="/MusicianAdmin.jsp"/>
+            <forward name="addeditmusician" path="/AddEditMusicianAdmin.jsp"/>
+        </action>
+        <action name="MusicianActionForm" path="/addeditmusician" scope="request" type="com.j2ee.BeanAction.AddEditMusicianAction">
+            <forward name="success" path="/musicians.do"/>
+            <forward name="fail" path="/AddEditMusicianAdmin.jsp"/>
+        </action>
+        <action name="SingerActionForm" path="/addeditsinger" scope="request" type="com.j2ee.BeanAction.AddEditSingerAction" validate="false">
+            <forward name="success" path="/singers.do"/>
+            <forward name="fail" path="/AddEditSingerAdmin.jsp"/>
+        </action>
+            
+        <action name="SingerActionForm" path="/singers" scope="request" type="com.j2ee.BeanAction.SingerAdminAction" validate="false">
+            <forward name="success" path="/SingerAdmin.jsp"/>
+            <forward name="addeditsinger" path="/AddEditSingerAdmin.jsp"/>
+        </action>
+        <action path="/welcome" type="com.j2ee.BeanAction.WelcomeAction">
+            <forward name="success" path="/welcomeStruts.jsp"/>
+        </action>
+        <action name="SongActionForm" path="/upload" scope="request" type="com.j2ee.BeanAction.UserUploadAction" validate="false">
+            <forward name="upload" path="/UserUpload.jsp"/>
+            <forward name="success" path="/welcome.do"/>
+            <forward name="fail" path="/upload.do"/>
+        </action>
+        <action path="/download" type="com.j2ee.BeanAction.DownloadAction"/>
         <action input="/songupload" name="SongUploadActionForm" path="/songupload" scope="request" type="com.j2ee.BeanAction.SongUploadAction" validate="false"/>
-        <action input="/res" name="sampleActionform" path="/login" scope="request" type="com.j2ee.BeanAction.sampleBeanAction" validate="false"/>
+        <action input="/res" name="UserActionForm" path="/login" scope="request" type="com.j2ee.BeanAction.UserBeanAction" validate="false"/>
         <action name="SongActionForm" path="/search" scope="request" type="com.j2ee.BeanAction.SongAction" validate="false"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
         <action  name="SignUpActionForm" path="/signup" scope="request" type="com.j2ee.BeanAction.SignUpAction"/>

@@ -39,8 +39,8 @@ public class CommentListAction extends org.apache.struts.action.Action {
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-        
-        List<CommentActionForm> list = CommentDB.getAllComment();
+        int songId = Integer.parseInt(request.getParameter("songId"));
+        List<CommentActionForm> list = CommentDB.getAllComment(songId);
         String result = "";
         Gson gson = new Gson();
         result = gson.toJson(list);

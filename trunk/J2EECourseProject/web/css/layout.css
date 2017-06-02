@@ -32,7 +32,7 @@ html, body{
 }
 
 .backgroundLayer {
-    position: absolute;
+    position: fixed;
     background: radial-gradient(at top left, #F7E9AB, #221526);
     z-index: var(--z_background_theme_color);
     width: 100%;
@@ -40,7 +40,7 @@ html, body{
 }
 
 .background01{
-    position: absolute;
+    position: fixed;
     background-image: url(../res/bg01.jpg);
     opacity: 0.1;
     z-index: var(--z_background);

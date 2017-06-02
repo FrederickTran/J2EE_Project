@@ -5,7 +5,7 @@
  */
 package com.j2ee.BeanAction;
 
-import com.j2ee.DataTableBridge.ConnectDB;
+import com.j2ee.DataTableBridge.CommentDB;
 import java.io.PrintWriter;
 import java.util.Date;
 import javax.servlet.http.HttpServletRequest;
@@ -45,7 +45,7 @@ public class CommentAction extends org.apache.struts.action.Action {
         String songId = (String)request.getParameter("songId");
         Date timeStam=new Date(System.currentTimeMillis());
         
-        if(ConnectDB.comment(comment,accountId,songId)){
+        if(CommentDB.comment(comment,accountId,songId)){
             result = SUCCESS;
         }
         else{

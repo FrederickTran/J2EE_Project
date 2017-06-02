@@ -20,7 +20,7 @@ var CONST_BUTTON_GLYPHICON_PAUSE = 'glyphicon glyphicon-pause';
 var CONST_BUTTON_GLYPHICON_MUTED = 'glyphicon glyphicon-volume-off';
 var CONST_BUTTON_GLYPHICON_UNMUTED = 'glyphicon glyphicon-volume-up';
 
-window.addEventListener('load', function () {
+function LoadMedia() {
     audioControler = document.getElementById('media-controler');
     UI_timeNavigator = document.getElementById('time-navigate');
     UI_soundNavigator = document.getElementById('sound-navigate-bar');
@@ -32,10 +32,7 @@ window.addEventListener('load', function () {
     UI_progressbarCurrentBuffer = document.getElementById('time-navigate-downloaded');
     UI_timerLabel = document.getElementById('timer');
     UI_songInfo = document.getElementById('song-info-cell');
-
-    /* DEMO HARD-CODED */
-    audioControler.src = 'res/demo.mp3';
-});
+}
 
 String.prototype.toHHMMSS = function () {
     var sec_num = parseInt(this, 10);

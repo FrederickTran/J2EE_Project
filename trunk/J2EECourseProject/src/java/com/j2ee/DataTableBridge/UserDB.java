@@ -6,7 +6,7 @@
 package com.j2ee.DataTableBridge;
 
 import com.j2ee.BeanForm.SongActionForm;
-import com.j2ee.BeanForm.sampleActionform;
+import com.j2ee.BeanForm.UserActionForm;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.Date;
@@ -19,8 +19,8 @@ import java.util.ArrayList;
  * @author ngoct
  */
 public class UserDB {
-    public static ArrayList<sampleActionform> getAllUser() throws Exception{
-        ArrayList<sampleActionform> userList = new ArrayList();
+    public static ArrayList<UserActionForm> getAllUser() throws Exception{
+        ArrayList<UserActionForm> userList = new ArrayList();
         Connection cn = ConnectDB.getConnect();
         try {
             CallableStatement cs = cn.prepareCall("{ call SP_USER_GETAll }");
@@ -29,7 +29,7 @@ public class UserDB {
                 String accountid = rs.getString("AccountId");
                 String password = rs.getString("Password");
                 String name = rs.getString("AccountName");
-                sampleActionform user = new sampleActionform();
+                UserActionForm user = new UserActionForm();
                 user.setAccountID(accountid);
                 user.setPassword(password);
                 userList.add(user);
@@ -98,5 +98,25 @@ public class UserDB {
             ConnectDB.Close();
         }
         return false;
+    }
+    public static UserActionForm getById(String accountId) {
+        Connection cn = ConnectDB.getConnect();
+        try {
+            CallableStatement cs = cn.prepareCall("{ call SP_USER_GETBYID(?) }");
+            cs.setString("AccountId", accountId);
+            ResultSet rs = cs.executeQuery();
+            rs.next();
+            String accountid = rs.getString("AccountId");
+            String name = rs.getString("AccountName");
+            UserActionForm user = new UserActionForm();
+            user.setAccountID(accountid);
+            user.setName(name);
+            return user;
+        } catch (SQLException ex) {
+            return null;
+        }
+        finally{
+            ConnectDB.Close();
+        }
     }
 }

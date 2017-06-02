@@ -4,15 +4,11 @@ function onLoadSongAdmin(){
         var selText = $(this).text();
         $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
         var page = document.getElementById("curPage").innerText;
-        getPage(1);
+        getPageSong(1);
         $("#btnSearch").click(function(){
             alert($('.btn-select').text()+", "+$('.btn-select2').text());
         });
     });
-//    $('#new-song-form').submit(function () {
-//        validate();
-//        return false;
-//    });
 }
 function deleteSong(id){
     var result = confirm("Want to delete this song?");
@@ -45,12 +41,12 @@ function deleteSong(id){
     return false;
 }
 
-function getPage(page){
+function getPageSong(page){
     var num = parseInt(document.getElementById("btnRegion").innerText);
     var sort = document.getElementById("sort-by-name");
     window.location = 'songs.do?task=retrieve&num=' + num + "&page=" + page + "&sort=" + sort.checked;
 }
-function validate(){
+function validateSong(){
     var songId = document.getElementById("songid");
     var songName = document.getElementById("songname");
     var file = document.getElementById("file");
@@ -67,7 +63,7 @@ function validate(){
     return true;
 }
 
-function search(){
+function searchSong(){
     key = document.getElementById("srch-term").value;
     if(key === "" || key.length < 2)
     {
@@ -78,5 +74,83 @@ function search(){
     return false;
 }
 
+//---------------------------------------------------------------------------
+//Musician
 
+function onLoadMusicianAdmin(){
+   
+    $(".dropdown-menu li a").click(function(){
+        var selText = $(this).text();
+        $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+        var page = document.getElementById("curPage").innerText;
+        getPageMusician(1);
+        $("#btnSearch").click(function(){
+            alert($('.btn-select').text()+", "+$('.btn-select2').text());
+        });
+    });
+}
+
+function getPageMusician(page){
+    var num = parseInt(document.getElementById("btnRegion").innerText);
+    var sort = document.getElementById("sort-by-name");
+    window.location = 'musicians.do?task=retrieve&num=' + num + "&page=" + page + "&sort=" + sort.checked;
+}
+function validateMusician(){
+//    var songId = document.getElementById("songid");
+//    var songName = document.getElementById("songname");
+//    var file = document.getElementById("file");
+    
+    return true;
+}
+
+function searchMusician(){
+    key = document.getElementById("srch-term").value;
+    if(key === "" || key.length < 2)
+    {
+        alert("Search key should has more than 1 letter!");
+        return false;
+    }
+    window.location = 'musicians.do?task=search&key=' + key;
+    return false;
+}
+
+//---------------------------------------------------------------------------
+//Singer
+
+function onLoadSingerAdmin(){
+   
+    $(".dropdown-menu li a").click(function(){
+        var selText = $(this).text();
+        $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+        var page = document.getElementById("curPage").innerText;
+        getPageSinger(1);
+        $("#btnSearch").click(function(){
+            alert($('.btn-select').text()+", "+$('.btn-select2').text());
+        });
+    });
+}
+
+function getPageSinger(page){
+    var num = parseInt(document.getElementById("btnRegion").innerText);
+    var sort = document.getElementById("sort-by-name");
+    window.location = 'singers.do?task=retrieve&num=' + num + "&page=" + page + "&sort=" + sort.checked;
+}
+function validateSinger(){
+//    var songId = document.getElementById("songid");
+//    var songName = document.getElementById("songname");
+//    var file = document.getElementById("file");
+    
+    return true;
+}
+
+function searchSinger(){
+    key = document.getElementById("srch-term").value;
+    if(key === "" || key.length < 2)
+    {
+        alert("Search key should has more than 1 letter!");
+        return false;
+    }
+    window.location = 'singers.do?task=search&key=' + key;
+    return false;
+}
 

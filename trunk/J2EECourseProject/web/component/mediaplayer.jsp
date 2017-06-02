@@ -18,7 +18,11 @@
         <!-- THIS IS THE CODE -->
         <div id="player">
             <div id="player-wrapper">
-                <audio id="media-controler"></audio>
+                <audio id="media-controler"
+                       <c:if test="${song != null}">
+                           src="${song.link}"
+                       </c:if>
+                       ></audio>
                 <table id="player-layout">
                     <tr>
                         <td>
@@ -29,10 +33,14 @@
                         <td class="grow" id="song-info-cell">
                             <div id="song-info">
                                 <div id="song-name">
-                                    Небеса Европы
+                                    <c:if test="${song != null}">
+                                        ${song.songName}
+                                    </c:if>
                                 </div>
                                 <div id="musician-name">
-                                    Александр Рыбак
+                                    <c:if test="${song != null}">
+                                        ${song.musicianName}
+                                    </c:if>
                                 </div>
                                 <div id="time-navigate" class="navigate_bar_adjustable" onclick="action_Skip(event)">
                                     <div id="time-navigate-bar">

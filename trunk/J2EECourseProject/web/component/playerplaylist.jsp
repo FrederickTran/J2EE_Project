@@ -20,11 +20,7 @@
                 <div class="row no_gutter">
                     <%@include file="social.jsp" %>
                 </div>
-                <div class="row no_gutter">
-                    <div id="song_list_player" class="song_list has_scrollbar">
-                        
-                    </div>
-                </div>
+                
                 
             </div>
         

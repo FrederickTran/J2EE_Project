@@ -4,6 +4,7 @@
 <%@ taglib uri="WEB-INF/struts-bean.tld" prefix="bean" %>
 <%@ taglib uri="WEB-INF/struts-html.tld" prefix="html" %>
 <%@ taglib uri="WEB-INF/struts-logic.tld" prefix="logic" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html:html lang="true">
     <head>
@@ -30,6 +31,11 @@
                          
                         <div id="main_search_box" class="main_content_table_cell full_expand smooth_transform" align="center" >
                             <%@include file="component/searchbox.jsp" %>
+                            <input id='songId' class='hide' 
+                                   <c:if test="${song != null}">
+                                        value='${song.songId}'
+                                    </c:if>
+                                   />
                         </div>
                         <div id="player-playlist">
                             <%@include file="component/playerplaylist.jsp" %>

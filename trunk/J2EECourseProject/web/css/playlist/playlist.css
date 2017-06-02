@@ -238,8 +238,11 @@ and open the template in the editor.
     margin: 10px 0px 0px 0px; 
     position: relative; 
     bottom: 0;
+    height: 410px;
 }
-
+#song_list_search{
+    height: 350px;
+}
 .row.no_gutter {
     margin-left: 0 !important;
     margin-right: 0 !important;;

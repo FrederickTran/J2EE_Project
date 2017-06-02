@@ -28,31 +28,23 @@
 
     <div class = "backgroundLayer"></div>
     <div class="background01"></div>
-    <%@include file="component/navigation.jsp" %>
+    <%@include file="component/adminnavigation.jsp" %>
     <div class="container-fluid full">
         <div class="row">
             <section class="content">
-                <div class="btn-group col-md-8 col-md-offset-2">
-                    <button type="button" class="col-md-3 btn btn-success btn-filter" data-target="pagado">Musician</button>
-                    <button type="button" class="col-md-3 btn btn-warning btn-filter" data-target="pendiente">Singer</button>
-                    <button type="button" class="col-md-3 btn btn-danger btn-filter" data-target="cancelado">User</button>
-                    <button type="button" class="col-md-3 btn btn-default btn-filter" data-target="all">Comment</button>
-                </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div class="panel panel-default">
-                        <a href="songs.do" id="title"><h1 class="panel-title">Song Management</h1></a>
                         <div class="panel-body">
                             <div class="table-container">
                                 <div class="panel panel-default panel-table">
                                     <div class="panel-heading">
-                                        <div class="row">
-                                            <div class="col col-xs-12 text-center">
-                                                <a type="button" href="songs.do?task=add" class="btn btn-sm btn-primary btn-create" >Add New Song</a>
-                                            </div>
+                                        <div class="row text-center">
+                                            <h1 class="page-title">${song != null? 'Edit Song':'Add New Song'}</h1>
                                         </div>
                                     </div>
                                 <div class="panel-body">
-                                    <html:form action="addeditsong" method="post" enctype="multipart/form-data" onsubmit="return validate()">
+                                    <div class="col-md-8 col-md-offset-2">
+                                    <html:form action="addeditsong" method="post" enctype="multipart/form-data" onsubmit="return validateSong()">
                                         <input name="songId" class="form-control hide" id="songid" value="${song != null? song.songId:''}"/>
                                         <div class="form-group">
                                           <label for="songname">Song Name</label>
@@ -81,18 +73,20 @@
                                           <input name="price" class="form-control" id="price" value="${song != null? song.price:''}"/>
                                         </div>
                                         <div class="form-group">
-                                          <label for="file">File input</label>
+                                          <label for="file">Music File</label>
                                           <p 
                                               <c:if test="${song == null}">
                                               class="hide"
                                               </c:if>
                                               >${song != null && filename != null? filename:''}</p>
                                           <input type="file" name="file" class="form-control file-loading" id="file"/>
-                                          <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                          <small id="fileHelp" class="form-text text-muted">Please select a mp3/mp4 file to upload.</small>
                                         </div>
-                                        <button type="submit" class="form-control btn btn-primary">Submit</button>
+                                        <div class="col-md-4 col-md-offset-4">
+                                            <button type="submit" class="form-control btn btn-primary">Submit</button>
+                                        </div>
                                       </html:form>
-                                    
+                                    </div>
                                 </div>
                         <div class="panel-footer">
                             

@@ -9,8 +9,10 @@ import com.j2ee.BeanForm.SignUpActionForm;
 import com.j2ee.DataTableBridge.UserDB;
 import java.io.PrintWriter;
 import java.util.Date;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -54,6 +56,11 @@ public class SignUpAction extends org.apache.struts.action.Action {
         String expiration = (String)request.getParameter("expiration");
         if(UserDB.signUp(accountId, password, accountName, name, addressLine1, addressLine2, addressZip, addressCountry, cardNumber, cvvCode, expiration)){
             result = SUCCESS;
+            HttpSession ss = request.getSession();
+            ss.setAttribute(accountId, "true");
+            Cookie userck = new Cookie("username", accountId);
+            userck.setMaxAge(60*30);
+            response.addCookie(userck);
         }
         else{
             result = FAIL;

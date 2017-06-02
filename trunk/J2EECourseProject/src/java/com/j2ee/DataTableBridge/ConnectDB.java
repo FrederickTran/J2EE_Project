@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import com.j2ee.BeanForm.sampleActionform;
+import com.j2ee.BeanForm.UserActionForm;
 import java.sql.Date;
 
 
@@ -48,32 +48,5 @@ public class ConnectDB {
         } catch (SQLException ex) {
             Logger.getLogger(ConnectDB.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    public static boolean comment(String comment, String accountId,String songId) {
-        
-        Date date =new Date(System.currentTimeMillis());
-        
-        Connection cn = ConnectDB.getConnect();
-        
-        try {
-            CallableStatement cs = cn.prepareCall("{ call SP_COMMENT_INSERT(?, ?, ?, ?) }");
-            cs.setString("Comment", comment);
-            cs.setString("AccountId", accountId);
-            cs.setString("SongId", songId);
-            cs.setDate("TimeStam", date);
-            
-            int rs = cs.executeUpdate();
-            if(rs == 1){
-                return true;
-            }
-        } 
-        catch (SQLException ex) {
-            return false;
-        }
-        finally{
-            ConnectDB.Close();
-        }
-        
-        return false;
     }
 }

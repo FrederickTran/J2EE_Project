@@ -12,8 +12,8 @@
         <title>Play list</title>
     </head>
     <body>
-        <div class="main_content_table_cell has_scrollbar smooth_transform" id="side_bench_search_list">
-            <div id="song_list_search" class="song_list">
+        <div class="main_content_table_cell smooth_transform" id="side_bench_search_list">
+            <div id="song_list_search" class="song_list has_scrollbar">
                 
                
             </div>

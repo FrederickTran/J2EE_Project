@@ -16,7 +16,7 @@
         <div class="form-group search_box_1">
             <div class="container-fluid">
                 <form id="search-form">
-                <div id="logo-search-box" class="row">
+                <div id="logo-search-box">
                     <div id="logo-search">
                         <img class="logo" src="res/logo.png" style="display: block">
                         <input type="text" id="main_search_box_key_word" name="search-input" class="form-control" >

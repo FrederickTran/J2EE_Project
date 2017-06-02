@@ -29,20 +29,13 @@
 
     <div class = "backgroundLayer"></div>
     <div class="background01"></div>
-    <%@include file="component/navigation.jsp" %>
-    <div class="container-fluid full">
+    <%@include file="component/adminnavigation.jsp" %>
+    <div class="container-fluid full content">
         <div class="row">
-            <section class="content">
-                <div class="btn-group col-md-8 col-md-offset-2">
-                    <button type="button" class="col-md-3 btn btn-success btn-filter" data-target="pagado">Musician</button>
-                    <button type="button" class="col-md-3 btn btn-warning btn-filter" data-target="pendiente">Singer</button>
-                    <button type="button" class="col-md-3 btn btn-danger btn-filter" data-target="cancelado">User</button>
-                    <button type="button" class="col-md-3 btn btn-default btn-filter" data-target="all">Comment</button>
-                </div>
                 <div class="col-md-8 col-md-offset-2">
                     
                     <div class="panel panel-default">
-                        <a href="songs.do" id="title"><h1 class="panel-title">Song Management</h1></a>
+                        
                         <div class="panel-body">
                             <div class="col col-md-6 text-left">
                                 <table>
@@ -75,7 +68,7 @@
                                         <td><label>Sort By Name:</label></td>
                                         <td><div list-group-item >
                                             <div class="material-switch">
-                                                <input class="hide" id="sort-by-name" name="sort-by-name" type="checkbox" onChange="getPage(${curPage})"
+                                                <input class="hide" id="sort-by-name" name="sort-by-name" type="checkbox" onChange="getPageSong(${curPage})"
                                                        <c:if test="${sort == true}">
                                                            checked
                                                        </c:if>
@@ -92,7 +85,7 @@
                             </div>
                             <div class="col col-xs-6 text-right btn-group">
 
-                                <form class="navbar-form" role="search" onsubmit="return search()">
+                                <form class="navbar-form" role="search" onsubmit="return searchSong()">
                                     <div class="input-group add-on">
                                         <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text" value="${key}">
                                         <div class="input-group-btn">
@@ -159,7 +152,7 @@
                                             <ul class="pagination justify-content-end mt-3 mr-3 pager">
                                                 <c:if test = "${curPage > 1}">
                                                     <li class="page-item">
-                                                        <a class="page-link" href="#" onclick="getPage(${curPage - 1})">Previous</a>
+                                                        <a class="page-link" href="#" onclick="getPageSong(${curPage - 1})">Previous</a>
                                                     </li>
                                                 </c:if>
                                                 <c:if test = "${curPage <= 1}">
@@ -168,17 +161,17 @@
                                                     </li>
                                                 </c:if>
                                                 <c:forEach var="i" begin="${curPage-9>=1?curPage-9:1}" end="${curPage-1}">  
-                                                    <li class="page-item"><a class="page-link" href="#" onclick="getPage(${i})">${i}</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#" onclick="getPageSong(${i})">${i}</a></li>
                                                 </c:forEach>  
                                                 <li class="page-item active">
                                                     <span class="page-link" id="curPage">${curPage}</span>
                                                 </li>
                                                 <c:forEach var="j" begin="${curPage+1}" end="${curPage+9<=maxPage?curPage+9:maxPage}">  
-                                                    <li class="page-item"><a class="page-link" href="#" onclick="getPage(${j})">${j}</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#" onclick="getPageSong(${j})">${j}</a></li>
                                                 </c:forEach> 
                                                 <c:if test = "${curPage < maxPage}">
                                                     <li class="page-item ">
-                                                        <a class="page-link" href="#" onclick="getPage(${curPage + 1})">Next</a>
+                                                        <a class="page-link" href="#" onclick="getPageSong(${curPage + 1})">Next</a>
                                                     </li>
                                                 </c:if>
                                                 <c:if test = "${curPage == maxPage}">
@@ -200,7 +193,6 @@
 
     </div>
 </div>
-</section>
 </div>
 </div> <!-- container -->
 </body>

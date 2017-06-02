@@ -39,6 +39,7 @@ and open the template in the editor.
 
 .tab-pane{
     color: var(--color07);
+    height: 460px;
 }
 
 #link-share{
@@ -50,7 +51,9 @@ and open the template in the editor.
 .tab-content{
     margin-left: 15px;
 }
-
+#list-comment{
+    margin-top: 10px;
+}
 
 
 
