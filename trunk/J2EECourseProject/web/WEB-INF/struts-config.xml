@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="SongUploadActionForm" type="com.j2ee.BeanForm.SongUploadActionForm"/>
         <form-bean name="NewStrutsActionForm" type="com.j2ee.BeanForm.NewStrutsActionForm"/>
         <form-bean name="SongActionForm" type="com.j2ee.BeanForm.SongActionForm"/>
         <form-bean name="SingerActionForm" type="com.j2ee.BeanForm.SingerActionForm"/>
@@ -33,6 +34,7 @@
             <forward name="success" path="/songs.do"/>
             <forward name="fail" path="/addeditsong.do"/>
         </action>
+        <action input="/songupload" name="SongUploadActionForm" path="/songupload" scope="request" type="com.j2ee.BeanAction.SongUploadAction" validate="false"/>
         <action input="/res" name="sampleActionform" path="/login" scope="request" type="com.j2ee.BeanAction.sampleBeanAction" validate="false"/>
         <action name="SongActionForm" path="/search" scope="request" type="com.j2ee.BeanAction.SongAction" validate="false"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
